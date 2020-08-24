@@ -1,0 +1,1658 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>StorySetup</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>292tahef63u6c</unique-id>
+    <saved-with-version>27500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Funstorm Ltd" id="chromeconsole" version="0.100000001">Chrome Console</plugin>
+        <plugin author="Joe7" id="cjs" version="1">Call JS</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.299999952">LiteTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Load</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">No</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="clickMe sprites">
+            <object-type name="clickMe_clickMe_clickMe" sid="965310270638671">
+                <plugin id="Sprite" />
+                <container>
+                    <type>clickMe</type>
+                    <type>clickMe_clickMe_clickMe</type>
+                    <type>clickMe_clickMe_boxTiny</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="471386684157107" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\New Story Layout\New Story Layout\ClickMe_NEW\clickMe.png">
+                            <collision-poly>
+                                <point x="0.267442" y="0.199134" />
+                                <point x="0.5" y="0.121212" />
+                                <point x="0.790698" y="0.155844" />
+                                <point x="0.790698" y="0.497835" />
+                                <point x="0.732558" y="0.800866" />
+                                <point x="0.5" y="0.800866" />
+                                <point x="0.319767" y="0.761905" />
+                                <point x="0.215116" y="0.497835" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="clickMe_clickMe_boxTiny" sid="694617348783455">
+                <plugin id="Sprite" />
+                <container>
+                    <type>clickMe</type>
+                    <type>clickMe_clickMe_clickMe</type>
+                    <type>clickMe_clickMe_boxTiny</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460160021525959" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\New Story Layout\New Story Layout\ClickMe_NEW\boxTiny.png">
+                            <collision-poly>
+                                <point x="0.0204082" y="0.142857" />
+                                <point x="0.979592" y="0.142857" />
+                                <point x="1" y="0.428571" />
+                                <point x="0.979592" y="0.857143" />
+                                <point x="0.489796" y="1" />
+                                <point x="0.0204082" y="0.857143" />
+                                <point x="0" y="0.428571" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="pg01 sprites">
+            <object-type name="pg01_pg01_WhiteBox" sid="575708317129208">
+                <plugin id="Sprite" />
+                <container>
+                    <type>pg01</type>
+                    <type>pg01_pg01_WhiteBox</type>
+                    <type>pg01_pg01_highLightBox</type>
+                    <type>pg01_pg01_txtOnly_01</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="991020641935299" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\MY FILES\VIJOD\Story Preset\Text\02_AlabMaBaba_TextHighlight\Text Highlight\textPg01\WhiteBox.png">
+                            <collision-poly>
+                                <point x="0.0299401" y="0.0931677" />
+                                <point x="0.499002" y="0.00621118" />
+                                <point x="0.97006" y="0.0931677" />
+                                <point x="0.998004" y="0.496894" />
+                                <point x="0.97006" y="0.906832" />
+                                <point x="0.499002" y="1" />
+                                <point x="0.0299401" y="0.906832" />
+                                <point x="0" y="0.496894" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pg01_pg01_highLightBox" sid="201123912026353">
+                <plugin id="Sprite" />
+                <container>
+                    <type>pg01</type>
+                    <type>pg01_pg01_WhiteBox</type>
+                    <type>pg01_pg01_highLightBox</type>
+                    <type>pg01_pg01_txtOnly_01</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563133159753133" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\MY FILES\VIJOD\Story Preset\Text\02_AlabMaBaba_TextHighlight\Text Highlight\textPg01\highLightBox.png">
+                            <collision-poly>
+                                <point x="0.00925926" y="0.0535714" />
+                                <point x="0.5" y="0" />
+                                <point x="0.990741" y="0.0535714" />
+                                <point x="0.990741" y="0.946429" />
+                                <point x="0.5" y="1" />
+                                <point x="0.00925926" y="0.946429" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pg01_pg01_txtOnly_01" sid="345450790858237">
+                <plugin id="Sprite" />
+                <container>
+                    <type>pg01</type>
+                    <type>pg01_pg01_WhiteBox</type>
+                    <type>pg01_pg01_highLightBox</type>
+                    <type>pg01_pg01_txtOnly_01</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452018793971353" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\MY FILES\VIJOD\Story Preset\Text\02_AlabMaBaba_TextHighlight\Text Highlight\textPg01\txtOnly_01.png">
+                            <collision-poly>
+                                <point x="0.499002" y="0.360248" />
+                                <point x="0.702595" y="0.496894" />
+                                <point x="0.499002" y="0.540373" />
+                                <point x="0.353293" y="0.496894" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="g">
+            <object-type name="author" sid="552004780781744">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="924411249227131">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914864798284778" speed="5">
+                        <frame duration="1" hotspotX="0.501818" hotspotY="0.5" original-source="C:\MY FILES\VIJOD\Illustration\2018\Stories\Laras_secret\Laras Secret_AuthorIllustrator\laras secret\author.png">
+                            <collision-poly>
+                                <point x="0.0945455" y="0.464286" />
+                                <point x="0.498182" y="0.660714" />
+                                <point x="0.92" y="0.392857" />
+                                <point x="0.92" y="0.5" />
+                                <point x="0.949091" y="0.75" />
+                                <point x="0.498182" y="0.857143" />
+                                <point x="0.0545455" y="0.732143" />
+                                <point x="0.0654545" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Camera" sid="863511558442183">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="846367511900966">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797111448122466" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Click" sid="954343415369639">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID" sid="236014891906914" type="number" />
+                    <instance-variable name="Click" sid="601398046984780" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870179456810448" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="illustrator" sid="271659047394689">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="265954140823343">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980132836181892" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MY FILES\VIJOD\Illustration\2018\Stories\Laras_secret\Laras Secret_AuthorIllustrator\laras secret\illustrator.png">
+                            <collision-poly>
+                                <point x="0.122727" y="0.519231" />
+                                <point x="0.5" y="0.403846" />
+                                <point x="0.904545" y="0.403846" />
+                                <point x="0.968182" y="0.5" />
+                                <point x="0.913636" y="0.634615" />
+                                <point x="0.5" y="0.576923" />
+                                <point x="0.0727273" y="0.692308" />
+                                <point x="0.0636364" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Restart" sid="228681469574433">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="448600117625474">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806345456013781" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505882" original-source="C:\MY FILES\VIJOD\Story Preset\reset.png">
+                            <collision-poly>
+                                <point x="0.155172" y="0.105882" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.982759" y="0.988235" />
+                                <point x="0.5" y="0.988235" />
+                                <point x="0.172414" y="0.882353" />
+                                <point x="0" y="0.494118" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="CallJS" sid="587991348158719">
+                <plugin id="cjs" />
+            </object-type>
+            <object-type name="Audio" sid="859173504170327">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Function" sid="512721018510269">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-folder name="Thumbnails">
+                <object-type name="TN_HOME" sid="289986371316330">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116863819485711" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\story_thumbnail_home.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494253" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.485196" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494253" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.485196" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_01" sid="666381802479348">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211645556002238" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_02.png">
+                                <collision-poly>
+                                    <point x="0.0265061" y="0.0350877" />
+                                    <point x="0.492344" y="0.00584795" />
+                                    <point x="0.965818" y="0.0292398" />
+                                    <point x="0.992546" y="0.48538" />
+                                    <point x="0.973455" y="0.959064" />
+                                    <point x="0.492344" y="0.994152" />
+                                    <point x="0.0226878" y="0.947368" />
+                                    <point x="0.00741438" y="0.48538" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_02" sid="624695047798481">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266090177494168" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_03.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.492337" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.492337" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_03" sid="573690467221661">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534944984076414" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_03.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.492337" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.492337" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_04" sid="475645249331031">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129573707610491" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_03.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.492337" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.492337" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_05" sid="505933809817382">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910598327568372" speed="5">
+                            <frame duration="1" hotspotX="0.501916" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_03.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.492337" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.492337" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_06" sid="731069489037362">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="883815889034835" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_07" sid="110968887613887">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395826126798035" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_08" sid="936345241248633">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="441652264710899" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_09" sid="900946677379520">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="354744141786272" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_10" sid="470563696024322">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987056015170988" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.492135" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.492135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_11" sid="474947057183165">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495234735847678" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_04.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.485196" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.485196" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_12" sid="806119863043551">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="953240898480818" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_05.png">
+                                <collision-poly>
+                                    <point x="0.0230769" y="0.0350877" />
+                                    <point x="0.492308" y="0.00584795" />
+                                    <point x="0.969231" y="0.0292398" />
+                                    <point x="0.996154" y="0.48538" />
+                                    <point x="0.976923" y="0.959064" />
+                                    <point x="0.492308" y="0.994152" />
+                                    <point x="0.0192308" y="0.947368" />
+                                    <point x="0.00384615" y="0.48538" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_END" sid="152235020406542">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699789960754818" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\storyui02_export_thumbnail_opt03_06.png">
+                                <collision-poly>
+                                    <point x="0" y="0" />
+                                    <point x="0.494231" y="0" />
+                                    <point x="1" y="0" />
+                                    <point x="1" y="0.484512" />
+                                    <point x="1" y="1" />
+                                    <point x="0.494231" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0.484512" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_Close" sid="302161398054503">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="active" sid="544610502839463" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Anchor" sid="506579668798310">
+                            <behavior id="Anchor" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803175917564591" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_option03\nav_close.png">
+                                <collision-poly>
+                                    <point x="0.157895" y="0.157895" />
+                                    <point x="0.5" y="0.0131579" />
+                                    <point x="0.855263" y="0.144737" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.855263" y="0.855263" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.144737" y="0.855263" />
+                                    <point x="0.0131579" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_Conclusion" sid="441894156728035">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209431620529562" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\thumbnail_conclusionIcon.png">
+                                <collision-poly>
+                                    <point x="0.15" y="0.151899" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.85" y="0.151899" />
+                                    <point x="1" y="0.493671" />
+                                    <point x="0.85" y="0.848101" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.15" y="0.848101" />
+                                    <point x="0.0125" y="0.493671" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_Intro" sid="607471562803050">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437643137987091" speed="5">
+                            <frame duration="1" hotspotX="0.506329" hotspotY="0.5125" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\thumbnail_introIcon_1.png">
+                                <collision-poly>
+                                    <point x="0.15" y="0.151899" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.85" y="0.151899" />
+                                    <point x="0.9875" y="0.493671" />
+                                    <point x="0.85" y="0.848101" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.15" y="0.848101" />
+                                    <point x="0" y="0.493671" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_Drag" sid="960359919356808">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="startY" sid="890923768244139" type="number" />
+                        <instance-variable name="endY" sid="762338625830645" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="836946861439851">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                        <behavior-type name="LiteTween" sid="806152137607352">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542569779727275" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TN_Overlay" sid="466428038667782">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="voMuted" sid="666520805613264" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299188533177685" speed="5">
+                            <frame duration="1" hotspotX="0.50039" hotspotY="0.500648" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\thumbnail_overlay02.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="DragDrop" sid="464498431224305">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642005768122396" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Home" sid="647803273434427">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="315281538854881" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808343979027842" speed="5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_home.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Menu" sid="699386543267409">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="587956738632251" type="boolean" />
+                    <instance-variable name="step" sid="487380055190397" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333115630927928" speed="5">
+                        <frame duration="1" hotspotX="0.473684" hotspotY="0.473684" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_button.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Music" sid="387196043995877">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="449420121784440" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324926837923229" speed="0">
+                        <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_musicon.png" />
+                        <frame duration="1" hotspotX="0.448276" hotspotY="0.583333" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_musinoff.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuBG" sid="317155688450022">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="690837928330180">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="960958264408346" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_bg.png">
+                            <image-point name="Imagepoint 1" x="0.165333" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.36" y="0.5" />
+                            <image-point name="Imagepoint 3" x="0.570667" y="0.5" />
+                            <image-point name="Imagepoint 4" x="0.768" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Thumbnails" sid="257352611627142">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="705286927616214" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="111122421084109" speed="5">
+                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\menu_thumbnail.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mute" sid="856423206064775">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="click" sid="638415965959117" type="boolean" />
+                    <instance-variable name="active" sid="491721251091028" type="boolean" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519352889836236" speed="0">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\New Story Layout\New Story Layout\storyui_01 (1)\menu_voiceon.png" />
+                        <frame duration="1" hotspotX="0.465753" hotspotY="0.551724" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\New Story Layout\New Story Layout\storyui_01 (1)\menu_voiceoff.png">
+                            <collision-poly>
+                                <point x="0.178082" y="0.224138" />
+                                <point x="0.493151" y="0.155172" />
+                                <point x="0.931507" y="0.0862069" />
+                                <point x="0.890411" y="0.5" />
+                                <point x="0.808219" y="0.758621" />
+                                <point x="0.493151" y="0.862069" />
+                                <point x="0.0958904" y="0.87931" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Next" sid="600266607310398">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="VODone" sid="332600867472341" type="boolean" />
+                    <instance-variable name="VOTimer" sid="856474560553364" type="number" />
+                    <instance-variable name="VOPaused" sid="262752447509996" type="boolean" />
+                    <instance-variable name="VOTime" sid="696290931069530" type="number" />
+                    <instance-variable name="active" sid="949420504516070" type="boolean" />
+                    <instance-variable name="End_pageno" sid="466064203723229" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="107850352989717">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Timer" sid="194542424329179">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455002723192530" speed="5">
+                        <frame duration="1" hotspotX="0.503759" hotspotY="0.503759" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\nav_previous02.png">
+                            <collision-poly>
+                                <point x="0.203007" y="0.195489" />
+                                <point x="0.503759" y="0.0827068" />
+                                <point x="0.774436" y="0.225564" />
+                                <point x="0.857143" y="0.496241" />
+                                <point x="0.75188" y="0.744361" />
+                                <point x="0.503759" y="0.857143" />
+                                <point x="0.240602" y="0.759399" />
+                                <point x="0.0977444" y="0.496241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Prev" sid="350045392999184">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="420036293225828" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123040592335261" speed="5">
+                        <frame duration="1" hotspotX="0.503759" hotspotY="0.503759" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\nav_next02.png">
+                            <collision-poly>
+                                <point x="0.203008" y="0.210526" />
+                                <point x="0.496241" y="0.0902256" />
+                                <point x="0.774436" y="0.225564" />
+                                <point x="0.857143" y="0.503759" />
+                                <point x="0.75188" y="0.759399" />
+                                <point x="0.496241" y="0.857143" />
+                                <point x="0.240602" y="0.759399" />
+                                <point x="0.0977444" y="0.503759" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Loading_Home">
+            <object-type name="Interactive" sid="737427412579418">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="214300064563760" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273558415887951" speed="5">
+                        <frame duration="1" hotspotX="0.50173" hotspotY="0.501742" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\story_button03.png">
+                            <collision-poly>
+                                <point x="0" y="0.158904" />
+                                <point x="0.494107" y="0" />
+                                <point x="1" y="0.182623" />
+                                <point x="1" y="0.672803" />
+                                <point x="1" y="1" />
+                                <point x="0.494107" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.672803" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_Adam" sid="345614735374927">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="stopClouds" sid="816492979998152" type="boolean" />
+                    <instance-variable name="gameDone" sid="872639085045160" type="boolean" />
+                    <instance-variable name="jumping" sid="618942808364060" type="boolean" />
+                    <instance-variable name="touchedOnce" sid="412731367868462" type="boolean" />
+                    <instance-variable name="doubleJumping" sid="831216405127059" type="boolean" />
+                    <instance-variable name="Joury" sid="425151228431441" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="970457531956818">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="106084775770952">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="981121633556496">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="750586718742056" speed="0">
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.503497" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_adam01.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.632867" />
+                                <point x="0.629032" y="1" />
+                                <point x="0.370968" y="1" />
+                                <point x="0" y="0.632867" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="615864945311223" speed="5">
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.503497" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_adam03.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.629371" />
+                                <point x="0.810526" y="1" />
+                                <point x="0.268421" y="1" />
+                                <point x="0" y="0.629371" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="523003908168433" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_adam02.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="J_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="279972981698211" speed="5">
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.575" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_joory01.png">
+                            <collision-poly>
+                                <point x="0.0430107" y="0.365625" />
+                                <point x="0.376344" y="0.23125" />
+                                <point x="0.892473" y="0.2875" />
+                                <point x="1" y="0.5" />
+                                <point x="0.709677" y="0.83125" />
+                                <point x="0.66129" y="1" />
+                                <point x="0.376344" y="1" />
+                                <point x="0.0806452" y="0.653125" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="J_Jump" pingpong="0" repeatcount="1" repeatto="0" sid="910869502768050" speed="5">
+                        <frame duration="1" hotspotX="0.505376" hotspotY="0.55625" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_joory03.png">
+                            <collision-poly>
+                                <point x="0.0967741" y="0.3125" />
+                                <point x="0.505376" y="0.196875" />
+                                <point x="0.844086" y="0.3" />
+                                <point x="0.989247" y="0.4875" />
+                                <point x="0.801075" y="0.690625" />
+                                <point x="0.865591" y="1" />
+                                <point x="0.317204" y="1" />
+                                <point x="0.0107527" y="0.4875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="J_Fall" pingpong="0" repeatcount="1" repeatto="0" sid="876421070091270" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_joory02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_Bar" sid="501686214850572">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="477550015802744">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939944700908641" speed="5">
+                        <frame duration="1" hotspotX="0.501656" hotspotY="0.545455" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_bar01.png">
+                            <collision-poly>
+                                <point x="0.016" y="0.142857" />
+                                <point x="0.498667" y="0.0357143" />
+                                <point x="0.984" y="0.142857" />
+                                <point x="0.997333" y="0.5" />
+                                <point x="0.984" y="0.892857" />
+                                <point x="0.498667" y="0.964286" />
+                                <point x="0.016" y="0.892857" />
+                                <point x="0.00266667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_book" sid="444286351084706">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="470028284332409" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="317227975362881">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566662419720494" speed="5">
+                        <frame duration="1" hotspotX="0.500808" hotspotY="0.500911" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\story_book.png">
+                            <collision-poly>
+                                <point x="0.149313" y="0.0218216" />
+                                <point x="0.553312" y="0" />
+                                <point x="0.939934" y="0.0387465" />
+                                <point x="1" y="0.453405" />
+                                <point x="0.972514" y="0.901913" />
+                                <point x="0.553312" y="0.986538" />
+                                <point x="0.144969" y="0.891335" />
+                                <point x="0.0515723" y="0.453405" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_cloudFG" sid="364060774342888">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="313846442290162">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122164729466251" speed="5">
+                        <frame duration="1" hotspotX="0.500336" hotspotY="0.5" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\story_cloud02.png">
+                            <collision-poly>
+                                <point x="0.0685945" y="0.504951" />
+                                <point x="0.499664" y="0.876238" />
+                                <point x="0.950235" y="0.366337" />
+                                <point x="0.99731" y="0.5" />
+                                <point x="0.99462" y="0.960396" />
+                                <point x="0.00537996" y="0.960396" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_cloudPan" sid="788738660605971">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="438937323877486">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="896731821505470" speed="5">
+                        <frame duration="1" hotspotX="0.500533" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_cloudPan.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_CloudTrail" sid="607698996446913">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="196557266461656">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_cloudParticle.png" />
+            </object-type>
+            <object-type name="Load_cover" sid="741551699671018">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="191754400312134">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855389902737679" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501873" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\title222.png">
+                            <collision-poly>
+                                <point x="0.191781" y="0.214286" />
+                                <point x="0.5" y="0.0892857" />
+                                <point x="0.808219" y="0.214286" />
+                                <point x="0.860731" y="0.5" />
+                                <point x="0.810502" y="0.788265" />
+                                <point x="0.5" y="0.920918" />
+                                <point x="0.182648" y="0.795918" />
+                                <point x="0.127854" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_DarkCloud" sid="836450322433247">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="300306412914189">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="459212030245987">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="168157090838387">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312384976810604" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_badCloud.png">
+                            <collision-poly>
+                                <point x="0.132353" y="0.195122" />
+                                <point x="0.5" y="0.0121951" />
+                                <point x="0.852941" y="0.219512" />
+                                <point x="0.992647" y="0.512195" />
+                                <point x="0.875" y="0.841463" />
+                                <point x="0.5" y="0.987805" />
+                                <point x="0.117647" y="0.853659" />
+                                <point x="0.0147059" y="0.512195" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_Final" sid="127581555882076">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="step" sid="471724993672564" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="843048085279531">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="988706620914499" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_image.png">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.847267" />
+                            <collision-poly>
+                                <point x="0.236719" y="0.487138" />
+                                <point x="0.5" y="0.0305466" />
+                                <point x="0.771094" y="0.471061" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_LoadBG" sid="153039963148450">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="loadSpeed" sid="371125430997331" type="number" />
+                    <instance-variable name="loaded" sid="473034247114604" type="boolean" />
+                    <instance-variable name="allLoaded" sid="669719307426059" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="688597906482566">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="301696068811442" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_bar02.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_Mask" sid="656200974499057">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125687473811447" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_PlayerCloud" sid="458352517334504">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="431828018470096">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="817511413038507">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="732942526642172">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400014601233556" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_cloudPlatform.png">
+                            <collision-poly>
+                                <point x="0.0335821" y="0.402439" />
+                                <point x="0.957089" y="0.402439" />
+                                <point x="0.992537" y="0.512195" />
+                                <point x="0.873134" y="0.841463" />
+                                <point x="0.5" y="0.97561" />
+                                <point x="0.119403" y="0.853659" />
+                                <point x="0.0149254" y="0.512195" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="Load_StarNew" sid="315590614704573">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="107878607422560">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="674360070842050">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="606736510796471" speed="5">
+                        <frame duration="1" hotspotX="0.502128" hotspotY="0.502008" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_star.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_thunder" sid="889460508932524">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="481261073394621">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="189042392198300">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460802948041600" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.518519" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_game_thunder.png">
+                            <collision-poly>
+                                <point x="0.272727" y="0.222222" />
+                                <point x="0.5" y="0" />
+                                <point x="0.954545" y="0.037037" />
+                                <point x="0.818182" y="0.481481" />
+                                <point x="0.636364" y="0.703704" />
+                                <point x="0.5" y="0.777778" />
+                                <point x="0.409091" y="0.666667" />
+                                <point x="0.0454545" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_TransparentCloud" sid="225333295650128">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="241372117396884">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="902243694393093">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="132251593408476">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619080387391854" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_cloud.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Load_WhiteBG" sid="212425573625159">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="835149464145761">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806335397982544" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LoadBG_Tile" sid="577894696292425">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_gradient.png" />
+            </object-type>
+            <object-type name="Autoplay" sid="433857127523927">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="762148889703987" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939957990575238" speed="5">
+                        <frame duration="1" hotspotX="0.501348" hotspotY="0.5" original-source="C:\MY FILES\VIJOD\Story Preset\new ui refrence\FINAL_30_Aug_2018\FINAL_30_Aug_2018\story_play.png">
+                            <collision-poly>
+                                <point x="0" y="0.167272" />
+                                <point x="0.433408" y="0" />
+                                <point x="1" y="0.190121" />
+                                <point x="1" y="0.662313" />
+                                <point x="1" y="1" />
+                                <point x="0.433408" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.662313" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Conclusion">
+            <object-type name="CAM" sid="942987753264555">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="603408589368435">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="718202890905841">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491409406385516" speed="5">
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Conclusion_constellationLine" sid="495829175946393">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="430282892742619">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="716491777603007">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="785061911929228" speed="5">
+                        <frame duration="1" hotspotX="0.50069" hotspotY="0.501144" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_constellationLine.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Conclusion_constellationPic" sid="666473560239416">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="707071459021694">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834571093213469" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501139" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_constellationPic.png">
+                            <collision-poly>
+                                <point x="0.108871" y="0.18451" />
+                                <point x="0.5" y="0.00455581" />
+                                <point x="0.745968" y="0.430524" />
+                                <point x="0.91129" y="0.498861" />
+                                <point x="0.955645" y="0.924829" />
+                                <point x="0.5" y="0.0546697" />
+                                <point x="0.126344" y="0.785877" />
+                                <point x="0.00268817" y="0.498861" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Conclusion_Image" sid="903920711146870">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="624119847468807">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366865965727166" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_conclusion\loading_image02.png">
+                            <collision-poly>
+                                <point x="0.266406" y="0.548231" />
+                                <point x="0.5" y="0.0369775" />
+                                <point x="0.854688" y="0.299035" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Conclusion_Star" sid="617645148825864">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID" sid="620045791844540" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="918114516064430">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Constellation" sid="228911476676345">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129808657706037" speed="5">
+                        <frame duration="1" hotspotX="0.502128" hotspotY="0.502008" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_loading\LOADING\EXPORTS\loading_star.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="End" sid="576312601999508">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="497307412911796">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="934928415552436">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Anchor" sid="191011849850210">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570725800401206" speed="5">
+                        <frame duration="1" hotspotX="0.500816" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_conclusion\loading_theend.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="End_Glow" sid="362401545014916">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="535602771821901">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="934077293172712">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Anchor" sid="958889998825210">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814701700319882" speed="5">
+                        <frame duration="1" hotspotX="0.500816" hotspotY="0.5" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\story_conclusion\loading_theendGlow.png">
+                            <collision-poly>
+                                <point x="0.244698" y="0.592593" />
+                                <point x="0.526917" y="0.577778" />
+                                <point x="0.967374" y="0.233333" />
+                                <point x="0.964111" y="0.662963" />
+                                <point x="0.526917" y="0.911111" />
+                                <point x="0.104405" y="0.62963" />
+                                <point x="0.0424144" y="0.451852" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Conclusion" sid="512919580739052">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="749941021354522" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="156100282783534">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="642310426478982" speed="5">
+                        <frame duration="1" hotspotX="0.511278" hotspotY="0.503759" original-source="C:\Users\Joseph\Documents\Construct2\Projects\Story Items\NEW_23_July_2018\storyui_01 (1)\nav_conclusion.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="744521327532909">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="textBTN" sid="433134930426747">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="382991034769763">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="279249498679169" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="clickMe" sid="519624401692507">
+            <plugin id="Spriter" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="269660194072680">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>clickMe</type>
+                <type>clickMe_clickMe_clickMe</type>
+                <type>clickMe_clickMe_boxTiny</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386564283881270" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pg01" sid="734504984709133">
+            <plugin id="Spriter" />
+            <container>
+                <type>pg01</type>
+                <type>pg01_pg01_WhiteBox</type>
+                <type>pg01_pg01_highLightBox</type>
+                <type>pg01_pg01_txtOnly_01</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320198170389103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChromeConsole" sid="161428030356907">
+            <plugin id="chromeconsole" />
+        </object-type>
+        <object-type name="Home_Cloud" sid="175755725945436">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559494528929772" speed="5">
+                    <frame duration="1" hotspotX="0.500365" hotspotY="0" original-source="C:\Users\Joseph\Documents\Construct2\Projects\OLD STORIES\STORY ITEMS\NEW_15_August_2018\story_cloud01.png">
+                        <collision-poly>
+                            <point x="0.000729395" y="0.00704225" />
+                            <point x="0.997082" y="0.028169" />
+                            <point x="0.917578" y="0.5" />
+                            <point x="0.943837" y="0.457746" />
+                            <point x="0.499635" y="0.352113" />
+                            <point x="0.0466813" y="0.549296" />
+                            <point x="0.0167761" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="clickMeFamily" plugin-id="Sprite" sid="691855963866984">
+            <members>
+                <member>clickMe_clickMe_boxTiny</member>
+                <member>clickMe_clickMe_clickMe</member>
+            </members>
+        </family>
+        <family name="pg01Family" plugin-id="Sprite" sid="375884203870990">
+            <members>
+                <member>pg01_pg01_highLightBox</member>
+                <member>pg01_pg01_txtOnly_01</member>
+                <member>pg01_pg01_WhiteBox</member>
+            </members>
+        </family>
+        <family name="text" plugin-id="Spriter" sid="855787588810472">
+            <members>
+                <member>pg01</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="width" sid="596009652836391" type="number" />
+                <instance-variable name="height" sid="513755713771818" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="615666166853366">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="TNIcons" plugin-id="Sprite" sid="428868919395897">
+            <members>
+                <member>TN_01</member>
+                <member>TN_02</member>
+                <member>TN_03</member>
+                <member>TN_04</member>
+                <member>TN_05</member>
+                <member>TN_06</member>
+                <member>TN_07</member>
+                <member>TN_08</member>
+                <member>TN_09</member>
+                <member>TN_10</member>
+                <member>TN_11</member>
+                <member>TN_12</member>
+                <member>TN_Conclusion</member>
+                <member>TN_END</member>
+                <member>TN_HOME</member>
+                <member>TN_Intro</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="active" sid="654805809910792" type="boolean" />
+                <instance-variable name="page" sid="398495747399888" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="777232824579014">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="UIBTNS" plugin-id="Sprite" sid="353993490694434">
+            <members>
+                <member>Conclusion</member>
+                <member>Home</member>
+                <member>Menu</member>
+                <member>MenuBG</member>
+                <member>Music</member>
+                <member>Mute</member>
+                <member>Next</member>
+                <member>Prev</member>
+                <member>Thumbnails</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Load.xml</layout>
+        <layout>1.xml</layout>
+        <layout>2.xml</layout>
+        <layout>3.xml</layout>
+        <layout>4.xml</layout>
+        <layout>5.xml</layout>
+        <layout>Dummypage.xml</layout>
+        <layout>Cover.xml</layout>
+        <layout>Thumbnails.xml</layout>
+        <layout>Home.xml</layout>
+        <layout>Conclusion.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Load_Events.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Cover_event.xml</event-sheet>
+        <event-sheet>Global.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>Event sheet 4.xml</event-sheet>
+        <event-sheet>Event sheet 5.xml</event-sheet>
+        <event-sheet>Lamsa4Events.xml</event-sheet>
+        <event-sheet>Thumbnails_Events.xml</event-sheet>
+        <event-sheet>Home_Events.xml</event-sheet>
+        <event-sheet>Conclusion_Events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="12">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="29">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="113" />
+        <global-instance type="ChromeConsole" uid="220" />
+    </global-instances>
+    <sounds-folder>
+        <sound-folder name="music">
+            <file name="Music.m4a" />
+            <file name="Music.ogg" />
+        </sound-folder>
+        <sound-folder name="sfx" />
+        <sound-folder name="vo">
+            <file name="The End__.m4a" />
+            <file name="The End__.ogg" />
+            <file name="Title.m4a" />
+            <file name="Title.ogg" />
+            <file name="The End if not available.m4a" />
+            <file name="The End if not available.ogg" />
+        </sound-folder>
+        <sound-folder name="Loading">
+            <file name="Click Story Mode.m4a" />
+            <file name="Click Story Mode.ogg" />
+            <file name="Fall down Lose.m4a" />
+            <file name="Fall down Lose.ogg" />
+            <file name="Jump click 1.m4a" />
+            <file name="Jump click 1.ogg" />
+            <file name="Jump click 2.m4a" />
+            <file name="Jump click 2.ogg" />
+            <file name="Long Jump finish.m4a" />
+            <file name="Long Jump finish.ogg" />
+            <file name="Transition.m4a" />
+            <file name="Transition.ogg" />
+        </sound-folder>
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Spriter animations">
+            <file name="clickMe.scml" />
+            <file name="clickMe.scon" />
+            <file name="pg01.scml" />
+            <file name="pg01.scon" />
+        </file-folder>
+        <file name="lamsa.js" />
+    </files-folder>
+</c2project>

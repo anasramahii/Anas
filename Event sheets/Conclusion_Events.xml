@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Conclusion_Events</name>
+    <events>
+        <include>Lamsa4Events</include>
+        <comment>Frame switch</comment>
+        <event-block sid="224825894669145">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="336233120047468" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="947310580956047" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="224430585536003" type="Conclusion_Image">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="488659991647409" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="235516705400224" type="Load_Final">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Start Camera pan and call popStars function</comment>
+        <event-block sid="883627882987667">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="632758111497456" type="Load_Final" />
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="10" name="Start" sid="958388129110444" type="CAM">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="343311121865817" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="461314426103431" type="Function">
+                    <param id="0" name="Name">&quot;popStars&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Pop stars in the constellation into place</comment>
+        <event-block sid="235349907663112">
+            <conditions>
+                <condition id="0" name="On function" sid="809614146113058" type="Function">
+                    <param id="0" name="Name">&quot;popStars&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="i" sid="961791653787192" static="0" type="number">1</variable>
+                <event-block sid="670652144280973">
+                    <conditions>
+                        <condition id="-10" name="For" sid="491913092999562" type="System">
+                            <param id="0" name="Name">&quot;Stars&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="356059534510098" type="System">
+                            <param id="0" name="Seconds">loopindex*0.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="263600124666305">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="484088093635036" type="Conclusion_Star">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">i</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Constellation" id="10" name="Start" sid="670489057249882" type="Conclusion_Star">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="877021669824147">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="287240767597905" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603683078433394">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="329352896565928" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="297172386059822" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="386804718079973" type="Conclusion_constellationLine">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Start constellation image tween and line pulse</comment>
+        <event-block sid="537337473968301">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="957749928918141" type="Conclusion_constellationLine" />
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="10" name="Start" sid="924807039437441" type="Conclusion_constellationPic">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="Sine" id="6" name="Update initial state" sid="295036428176496" type="Conclusion_constellationLine" />
+                <action behavior="Sine" id="0" name="Set active" sid="614313088655683" type="Conclusion_constellationLine">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Show end text</comment>
+        <event-block sid="108721975614314">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="604709690907681" type="Conclusion_constellationPic" />
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="10" name="Start" sid="496828778121139" type="End">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="875141389979892" type="End_Glow">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Say &quot;The End&quot; and glow</comment>
+        <event-block sid="917855042790290">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="824819929900200" type="End" />
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="6" name="Update initial state" sid="405484570953097" type="End_Glow" />
+                <action behavior="Sine" id="0" name="Set active" sid="576042492824552" type="End_Glow">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="445867607304313">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="866780200500891" type="System">
+                            <param id="0" name="Variable">Mute</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="919040958245674">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="765072991705273" type="System">
+                                    <param id="0" name="Variable">vo_available</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="298039873066139" type="Audio">
+                                    <param id="0" name="Audio file">The End__</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;_VO_&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="126083013894986">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="652265228650380" type="System" />
+                                <condition id="-14" name="Compare variable" sid="190493219488868" type="System">
+                                    <param id="0" name="Variable">vo_available</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="669794072604361" type="Audio">
+                                    <param id="0" name="Audio file">The End if not available</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;_VO_&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="435449525799967">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="649333429167859" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Execute" sid="289234232072256" type="CallJS">
+                            <param id="0" name="Value">&quot;STORYEND()&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

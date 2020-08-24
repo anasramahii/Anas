@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Load</layout>
+        <event-sheet active="1" order="1">Global</event-sheet>
+        <event-sheet order="2">Lamsa4Events</event-sheet>
+        <event-sheet order="3">Load_Events</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="clickMeFamily" />
+        <family expanded="0" name="pg01Family" />
+        <family expanded="0" name="text" />
+        <family expanded="0" name="TNIcons" />
+        <family expanded="0" name="UIBTNS" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/clickMe sprites/" />
+        <folder expanded="0" path="object-folder/pg01 sprites/" />
+        <folder expanded="0" path="object-folder/g/" />
+        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/UI/Thumbnails/" />
+        <folder expanded="0" path="object-folder/Loading_Home/" />
+        <folder expanded="0" path="object-folder/Conclusion/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="0" path="file-folder/Spriter animations/" />
+        <folder expanded="0" path="sound-folder/music/" />
+        <folder expanded="1" path="sound-folder/sfx/" />
+        <folder expanded="0" path="sound-folder/vo/" />
+        <folder expanded="0" path="sound-folder/Loading/" />
+        <folder expanded="1" path="animation-folder/clickMe_clickMe_clickMe/" />
+        <folder expanded="1" path="animation-folder/clickMe_clickMe_boxTiny/" />
+        <folder expanded="1" path="animation-folder/pg01_pg01_WhiteBox/" />
+        <folder expanded="1" path="animation-folder/pg01_pg01_highLightBox/" />
+        <folder expanded="1" path="animation-folder/pg01_pg01_txtOnly_01/" />
+        <folder expanded="1" path="animation-folder/author/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/Click/" />
+        <folder expanded="1" path="animation-folder/illustrator/" />
+        <folder expanded="1" path="animation-folder/Restart/" />
+        <folder expanded="1" path="animation-folder/TN_HOME/" />
+        <folder expanded="1" path="animation-folder/TN_01/" />
+        <folder expanded="1" path="animation-folder/TN_02/" />
+        <folder expanded="1" path="animation-folder/TN_03/" />
+        <folder expanded="1" path="animation-folder/TN_04/" />
+        <folder expanded="1" path="animation-folder/TN_05/" />
+        <folder expanded="1" path="animation-folder/TN_06/" />
+        <folder expanded="1" path="animation-folder/TN_07/" />
+        <folder expanded="1" path="animation-folder/TN_08/" />
+        <folder expanded="1" path="animation-folder/TN_09/" />
+        <folder expanded="1" path="animation-folder/TN_10/" />
+        <folder expanded="1" path="animation-folder/TN_11/" />
+        <folder expanded="1" path="animation-folder/TN_12/" />
+        <folder expanded="1" path="animation-folder/TN_END/" />
+        <folder expanded="1" path="animation-folder/TN_Close/" />
+        <folder expanded="1" path="animation-folder/TN_Conclusion/" />
+        <folder expanded="1" path="animation-folder/TN_Intro/" />
+        <folder expanded="1" path="animation-folder/TN_Drag/" />
+        <folder expanded="1" path="animation-folder/TN_Overlay/" />
+        <folder expanded="1" path="animation-folder/DragDrop/" />
+        <folder expanded="1" path="animation-folder/Home/" />
+        <folder expanded="1" path="animation-folder/Menu/" />
+        <folder expanded="1" path="animation-folder/Music/" />
+        <folder expanded="1" path="animation-folder/MenuBG/" />
+        <folder expanded="1" path="animation-folder/Thumbnails/" />
+        <folder expanded="1" path="animation-folder/Mute/" />
+        <folder expanded="1" path="animation-folder/Next/" />
+        <folder expanded="1" path="animation-folder/Prev/" />
+        <folder expanded="1" path="animation-folder/Interactive/" />
+        <folder expanded="1" path="animation-folder/Load_Adam/" />
+        <folder expanded="1" path="animation-folder/Load_Bar/" />
+        <folder expanded="1" path="animation-folder/Load_book/" />
+        <folder expanded="1" path="animation-folder/Load_cloudFG/" />
+        <folder expanded="1" path="animation-folder/Load_cloudPan/" />
+        <folder expanded="1" path="animation-folder/Load_cover/" />
+        <folder expanded="1" path="animation-folder/Load_DarkCloud/" />
+        <folder expanded="1" path="animation-folder/Load_Final/" />
+        <folder expanded="1" path="animation-folder/Load_LoadBG/" />
+        <folder expanded="1" path="animation-folder/Load_Mask/" />
+        <folder expanded="1" path="animation-folder/Load_PlayerCloud/" />
+        <folder expanded="1" path="animation-folder/Load_StarNew/" />
+        <folder expanded="1" path="animation-folder/Load_thunder/" />
+        <folder expanded="1" path="animation-folder/Load_TransparentCloud/" />
+        <folder expanded="1" path="animation-folder/Load_WhiteBG/" />
+        <folder expanded="1" path="animation-folder/Autoplay/" />
+        <folder expanded="1" path="animation-folder/CAM/" />
+        <folder expanded="1" path="animation-folder/Conclusion_constellationLine/" />
+        <folder expanded="1" path="animation-folder/Conclusion_constellationPic/" />
+        <folder expanded="1" path="animation-folder/Conclusion_Image/" />
+        <folder expanded="1" path="animation-folder/Conclusion_Star/" />
+        <folder expanded="1" path="animation-folder/End/" />
+        <folder expanded="1" path="animation-folder/End_Glow/" />
+        <folder expanded="1" path="animation-folder/Conclusion/" />
+        <folder expanded="1" path="animation-folder/textBTN/" />
+        <folder expanded="1" path="animation-folder/clickMe/" />
+        <folder expanded="1" path="animation-folder/pg01/" />
+        <folder expanded="1" path="animation-folder/Home_Cloud/" />
+    </folders-expanded>
+</c2uistate>

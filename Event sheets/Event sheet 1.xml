@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Global</include>
+        <event-group description="" sid="257481740416625" title="Story1">
+            <sub-events>
+                <event-block sid="600374355814162">
+                    <conditions>
+                        <condition id="0" name="On function" sid="824665800494976" type="Function">
+                            <param id="0" name="Name">&quot;touch_function&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

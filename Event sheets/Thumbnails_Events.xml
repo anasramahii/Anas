@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Thumbnails_Events</name>
+    <events>
+        <include>Lamsa4Events</include>
+        <event-block sid="263503396068959">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="115179839035737" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="333423270561281" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="322715256321926" type="TNIcons">
+                    <param id="0" name="Pin to">TN_Drag</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="671559992954322" type="TN_Drag">
+                    <param id="0" name="Y">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                </action>
+                <action id="-16" name="Wait" sid="388967516561256" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action behavior="Anchor" id="0" name="Set enabled" sid="595324420178381" type="TN_Close">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="342838675522000">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="760209357133712" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                </condition>
+                <condition behavior="DragDrop" id="3" inverted="1" name="Is enabled" sid="478155218712575" type="TN_Drag" />
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="462839155265511" type="TN_Drag">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753252915987404">
+            <conditions>
+                <condition id="-22" name="Else" sid="536198394542712" type="System" />
+                <condition id="-9" inverted="1" name="Layer is visible" sid="333545569102395" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                </condition>
+                <condition behavior="DragDrop" id="3" name="Is enabled" sid="400692186883199" type="TN_Drag" />
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="522923254353214" type="TN_Drag">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="978075196317198">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="753660966415267" type="TN_Drag" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="472856144301132">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="341005368181143" type="Next">
+                            <param id="0" name="Instance variable">End_pageno</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="295067252903045">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="817379600429099" type="System">
+                                    <param id="0" name="First value">ViewportTop(&quot;Thumbnails&quot;)+TN_Drag.Height</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">ViewportBottom(&quot;Thumbnails&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="969990111383461">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="566887325174999" type="TN_Drag">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="766872885081063" type="TN_Drag">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="509354223963598" type="TN_Drag">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="377544454089536">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="796936939129528" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="535076585988870" type="System">
+                                            <param id="0" name="First value">TN_Drag.Y+TN_Drag.Height</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">ViewportBottom(&quot;Thumbnails&quot;)-5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="121239690830638" type="TN_Drag">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">(ViewportBottom(&quot;Thumbnails&quot;)-5)-Self.Height</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="341804971009816" type="TN_Drag">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="308531597729796">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="603893240339361" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="915751589851530" type="TN_Drag">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="572878600025069" type="TN_Drag">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="988417680400327">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="621036712618454" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="392250033611615">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="293620887130177" type="TN_Drag">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportTop(0)+5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="501177512849842" type="TN_Drag">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="436805650986285" type="TN_Drag">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="916069562258123">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="165213677771746" type="System" />
+                                <condition id="-8" name="Compare two values" sid="813213579339111" type="System">
+                                    <param id="0" name="First value">TN_Drag.Y+TN_Drag.Height</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">ViewportBottom(0)-5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="568576601197367" type="TN_Drag">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">(ViewportBottom(&quot;Thumbnails&quot;)-5)-Self.Height</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="833467016945242" type="TN_Drag">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="594362007423131">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="750749844556303" type="Touch" />
+                <condition id="-8" name="Compare two values" sid="379430646253528" type="System">
+                    <param id="0" name="First value">Touch.TouchCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="747294771903509" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="272102197449741">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="871425727741714" type="Touch">
+                            <param id="0" name="Object">TN_Close</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="826591669803072" type="TN_Close">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="663716512725924" type="TN_Close">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="617168961288039" type="TN_Close">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="662294665855784" type="TN_Drag">
+                            <param id="0" name="Instance variable">startY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="885195845952763">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="405987754466146" type="Touch" />
+                <condition id="-8" name="Compare two values" sid="708118463589566" type="System">
+                    <param id="0" name="First value">Touch.TouchCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="346850559645003" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="465817959531117" type="TN_Drag">
+                    <param id="0" name="Instance variable">endY</param>
+                    <param id="1" name="Value">Self.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="285766774878418">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="605902280193615" type="Touch">
+                            <param id="0" name="Object">TN_Close</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="281283169843602" type="TN_Close">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="812464553659350">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="856757961616912" type="System">
+                                    <param id="0" name="Value">TN_Drag.Y</param>
+                                    <param id="1" name="Lower bound">TN_Drag.startY - 3</param>
+                                    <param id="2" name="Upper bound">TN_Drag.startY + 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="156171431320940" type="TN_Close">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="856805964318132" type="TN_Close">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="986463626496354" type="System">
+                                    <param id="0" name="Seconds">0.15</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="856172167746841">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="189029107864848" type="TN_Overlay">
+                                            <param id="0" name="Instance variable">voMuted</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="550493563049900" type="Function">
+                                            <param id="0" name="Name">&quot;VOMUTEOFF&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="969775057725163">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="412638301421878" type="System">
+                                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="414819060844897" type="TN_Overlay">
+                                            <param id="0" name="Instance variable">voMuted</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="304896094353295" type="TN_Drag">
+                                            <param id="0" name="Y">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="705252027760198">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="874648651833408" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="337150052557273" type="TN_Close">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="772223217637588" type="TN_Close">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="797202804091278">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="927371830298369" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="630307872668610" type="TN_Close">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="900740244842403" type="TN_Close">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="507752682966815" type="TN_Close">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="806297138459375">
+            <conditions>
+                <condition id="17" name="On tap object" sid="517770588882118" type="Touch">
+                    <param id="0" name="Object">TNIcons</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="769893765964297" type="System">
+                    <param id="0" name="First value">Touch.TouchCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="662306993653899" type="System">
+                    <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="157285478290354" type="TNIcons">
+                    <param id="0" name="Scale">0.9</param>
+                </action>
+                <action id="-16" name="Wait" sid="661737798031236" type="System">
+                    <param id="0" name="Seconds">0.15</param>
+                </action>
+                <action id="9" name="Set scale" sid="184535761117541" type="TNIcons">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="824015365828530" type="System">
+                    <param id="0" name="Seconds">0.15</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="798070192154601">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="326145763348361" type="TN_Overlay">
+                            <param id="0" name="Instance variable">voMuted</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="885903811172990" type="Function">
+                            <param id="0" name="Name">&quot;VOMUTEOFF&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294050666533985">
+                    <conditions />
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="611094366982413" type="System">
+                            <param id="0" name="Layout">TNIcons.page</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="176772273459707">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="775037323276460" type="Touch">
+                    <param id="0" name="Object">TN_Close</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="366573229468457" type="TN_Close">
+                    <param id="0" name="Instance variable">active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="441765921303054" type="TN_Close">
+                    <param id="0" name="Scale">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="710508060593601" type="TN_Close">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="806463429417716">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="525707062481649" type="TN_Drag" />
+                <condition id="4" name="Is touching object" sid="316199753125233" type="Touch">
+                    <param id="0" name="Object">DragDrop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="974727979838027" type="TN_Drag" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1736 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global</name>
+    <events>
+        <include>Thumbnails_Events</include>
+        <include>Lamsa4Events</include>
+        <event-block sid="875248820910370">
+            <conditions>
+                <condition id="666" name="On initialised" sid="528555116747743" type="clickMe" />
+            </conditions>
+            <actions>
+                <action id="666" name="Associate object type" sid="439783418421738" type="clickMe">
+                    <param id="0" name="Object">clickMe_clickMe_clickMe</param>
+                    <param id="1" name="Name">&quot;clickMe_clickMe&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="733691818028542" type="clickMe">
+                    <param id="0" name="Object">clickMe_clickMe_boxTiny</param>
+                    <param id="1" name="Name">&quot;clickMe_boxTiny&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="787498720220551">
+            <conditions>
+                <condition id="666" name="On initialised" sid="310317363589810" type="pg01" />
+            </conditions>
+            <actions>
+                <action id="666" name="Associate object type" sid="257271723332338" type="pg01">
+                    <param id="0" name="Object">pg01_pg01_WhiteBox</param>
+                    <param id="1" name="Name">&quot;pg01_WhiteBox&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="259173320495285" type="pg01">
+                    <param id="0" name="Object">pg01_pg01_highLightBox</param>
+                    <param id="1" name="Name">&quot;pg01_highLightBox&quot;</param>
+                </action>
+                <action id="666" name="Associate object type" sid="304248262826008" type="pg01">
+                    <param id="0" name="Object">pg01_pg01_txtOnly_01</param>
+                    <param id="1" name="Name">&quot;pg01_txtOnly_01&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="238672533734031" title="NewUpdate">
+            <sub-events>
+                <event-block sid="115463705858384">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="133692084488541" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="717707807108176" type="System">
+                            <param id="0" name="Variable">go_next_done</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="622105728327451" type="Next">
+                            <param id="0" name="Tag">&quot;go_next&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="179041715348993" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="863238166769227" type="Audio">
+                            <param id="0" name="Tag">&quot;_VOend_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="867668988142840" type="Audio">
+                            <param id="0" name="Tag">&quot;_theend_&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="229644179391010" type="Next">
+                            <param id="0" name="X">ViewportLeft(0)+(Next.Width/2+20)</param>
+                            <param id="1" name="Y">ViewportBottom(0)-(Next.Height/2+10)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="155803955129138" type="Prev">
+                            <param id="0" name="X">ViewportRight(0)-(Prev.Width/2+10)</param>
+                            <param id="1" name="Y">ViewportBottom(0)-(Prev.Height/2+10)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="568284041236472" type="Menu">
+                            <param id="0" name="X">ViewportRight(0)-(Menu.Width/2+10)</param>
+                            <param id="1" name="Y">ViewportTop(0)+(Menu.Height/2+10)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="613055384574611" type="MenuBG">
+                            <param id="0" name="X">Menu.X</param>
+                            <param id="1" name="Y">Menu.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="573833691371761" type="Conclusion">
+                            <param id="0" name="X">ViewportLeft(0)+(Conclusion.Width/2+20)</param>
+                            <param id="1" name="Y">ViewportBottom(0)-(Conclusion.Height/2+10)</param>
+                        </action>
+                        <action id="0" name="Execute" sid="461592364452791" type="CallJS">
+                            <param id="0" name="Value">&quot;SETCURRENTPAGE(&quot; &amp; int(LayoutName) &amp; &quot;)&quot;</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="265626986249235" type="text" />
+                        <action id="5" name="Pause animation" sid="124190243164695" type="clickMe" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="686827423864989">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="526920432972917" type="System">
+                                    <param id="0" name="Variable">go_next_time</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="539028490385445" type="Next">
+                                    <param id="0" name="Duration">go_next_time</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;go_next&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="979827100969940">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="704232044811327" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="419409451434351" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="930827090962797">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="759484099498199" type="System">
+                                    <param id="0" name="First value">int(LayoutName)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">Next.End_pageno</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="485956006234641" type="Next">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="358732509102800">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="901541146297654" type="System">
+                                    <param id="0" name="First value">int(LayoutName)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="232664947738185" type="Prev">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="819913374473210">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="233285680008883" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="608503219103843" type="Mute">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924821022471573">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="799562299635416" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="804726178818808" type="Mute">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="607798748911591">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="336629656025672" type="System">
+                                    <param id="0" name="Variable">Mute</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="179957118783593" type="Mute">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="446353772868313">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="106951231240990" type="System" />
+                                <condition id="-14" name="Compare variable" sid="517037845713540" type="System">
+                                    <param id="0" name="Variable">Mute</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="286281198507993" type="Mute">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="126136795637350">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Set position" sid="474443220455528" type="clickMe">
+                                    <param id="0" name="X">ViewportRight(0)</param>
+                                    <param id="1" name="Y">384</param>
+                                </action>
+                                <action id="4" name="Set current time in animation" sid="242512585063898" type="text">
+                                    <param id="0" name="time units">0</param>
+                                    <param id="1" name="New Position">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="856505221362578" type="text">
+                                    <param id="0" name="X">ViewportRight(0)+(text.width/2)+100</param>
+                                    <param id="1" name="Y">384</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="366303394628990" type="textBTN">
+                                    <param id="0" name="Width">text.width - 30</param>
+                                    <param id="1" name="Height">text.height - 40</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="700028448359930" type="textBTN">
+                                    <param id="0" name="X">text.X</param>
+                                    <param id="1" name="Y">text.Y</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="166270059377971" type="textBTN">
+                                    <param id="0" name="Pin to">text</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="284450937212989" type="Restart">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">text</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="224427299008719" type="Restart">
+                                    <param id="0" name="X">text.X-text.width/2-28</param>
+                                    <param id="1" name="Y">text.Y</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="392502027378940" type="Restart">
+                                    <param id="0" name="Pin to">text</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134377042038111">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="185936906940331" type="System">
+                                    <param id="0" name="Variable">music</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="196342140369674" type="Music">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486837574272549">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="876829223313006" type="Audio">
+                                    <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="892677514702219">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="365029307395131" type="System">
+                                            <param id="0" name="Variable">Mute</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Play (by name)" sid="431190692651409" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">str(LayoutName)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">Vo</param>
+                                            <param id="2" name="Tag (optional)">&quot;_VO_&quot;</param>
+                                        </action>
+                                        <action id="23" name="Seek to" sid="877608571140622" type="Audio">
+                                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                                            <param id="1" name="Position">0</param>
+                                        </action>
+                                        <action id="4" name="Set current time in animation" sid="745813859769298" type="text">
+                                            <param id="0" name="time units">0</param>
+                                            <param id="1" name="New Position">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="149024140159560" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="401640477295506" type="Next">
+                                            <param id="0" name="Instance variable">VOTimer</param>
+                                            <param id="1" name="Value">float(Audio.Duration(&quot;_VO_&quot;))-0.2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="439601980464645" type="Next">
+                                            <param id="0" name="Instance variable">VOTime</param>
+                                            <param id="1" name="Value">float(Audio.Duration(&quot;_VO_&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="811552239557565">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="632470091143668" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="461842650924235" type="System">
+                                            <param id="0" name="Variable">Mute</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Pause animation" sid="481744998846924" type="text" />
+                                        <action id="5" name="Pause animation" sid="750978332916963" type="clickMe" />
+                                        <action id="4" name="Set current time in animation" sid="568334202735916" type="clickMe">
+                                            <param id="0" name="time units">0</param>
+                                            <param id="1" name="New Position">0</param>
+                                        </action>
+                                        <action id="7" name="Play (by name)" sid="345285770607013" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">str(LayoutName)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">-100</param>
+                                            <param id="2" name="Tag (optional)">&quot;_VO_&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="958193182426874" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="795125647474327" type="Next">
+                                            <param id="0" name="Instance variable">VOTimer</param>
+                                            <param id="1" name="Value">float(Audio.Duration(&quot;_VO_&quot;))-0.2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="535364765110409" type="Next">
+                                            <param id="0" name="Instance variable">VOTime</param>
+                                            <param id="1" name="Value">float(Audio.Duration(&quot;_VO_&quot;))</param>
+                                        </action>
+                                        <action id="22" name="Set paused" sid="890163534102509" type="Audio">
+                                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="23" name="Seek to" sid="237539568368744" type="Audio">
+                                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                                            <param id="1" name="Position">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="663401336217242">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="650138032047072" type="Next">
+                            <param id="0" name="Tag">&quot;go_next&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="685450177126370" type="System">
+                            <param id="0" name="Variable">go_next_done</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="908829620434537">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="927741785054614" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="929544196731163">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="355428204218982" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="664281190098649" type="Audio">
+                            <param id="0" name="Tag">&quot;amb&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="813066782093390" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="378633870499766" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX1_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="660149362709931" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX2_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="150461406608224" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX3_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="974000475933995" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX4_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="458006691864061" type="Audio">
+                            <param id="0" name="Tag">&quot;_SFX5_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="310125690189195" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="778325705729166" type="Audio">
+                            <param id="0" name="Tag">&quot;_VOend_&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="595451124055141" type="Audio">
+                            <param id="0" name="Tag">&quot;_theend_&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="892153570563251">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="724115442116361" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="972952248040838">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="836804850488121" type="Thumbnails">
+                                    <param id="0" name="Object">MenuBG</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="935535960505442" type="Music">
+                                    <param id="0" name="Object">MenuBG</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="749534374612413" type="Mute">
+                                    <param id="0" name="Object">MenuBG</param>
+                                    <param id="1" name="Image point (optional)">3</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="295891260685379" type="Home">
+                                    <param id="0" name="Object">MenuBG</param>
+                                    <param id="1" name="Image point (optional)">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="879160662095815">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="731107311264905" type="System">
+                                    <param id="0" name="Variable">Mute</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="583906869478278" type="Next">
+                                    <param id="0" name="Instance variable">VODone</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="942542663314996" type="Next">
+                                    <param id="0" name="Instance variable">VOTimer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="835013310893371" type="Next">
+                                    <param id="0" name="Instance variable">VOTimer</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="163689796460169">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="692904436545146" type="Next">
+                                            <param id="0" name="Instance variable">VOTimer</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="462073727386750" type="Next">
+                                            <param id="0" name="Instance variable">VOTimer</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="928347362684804" type="Next">
+                                            <param id="0" name="Instance variable">VODone</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="165690326167605">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="740280279778936" type="System">
+                                                    <param id="0" name="Variable">Autoplay</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="347183225336551" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="622118766589434" type="Function">
+                                                    <param id="0" name="Name">&quot;NEXT&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="683019652494908">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="875707990260637" type="Next">
+                                                            <param id="0" name="Instance variable">End_pageno</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">int(LayoutName)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="104177254801237" type="System">
+                                                            <param id="0" name="Seconds">1.2</param>
+                                                        </action>
+                                                        <action id="-2" name="Go to layout" sid="513349524474210" type="System">
+                                                            <param id="0" name="Layout">Conclusion</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="644232723814127">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="561161449318251" type="MenuBG" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="237820231420278" type="Menu">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="602608723648339" type="Menu">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="384399039875848">
+                    <conditions>
+                        <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="181815290080123" type="MenuBG" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="523762424947459" type="Menu">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="214849936730637" type="Menu">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="324667160222258">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="598366678608329" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="888803633245436">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="376414922184348" type="Next">
+                                    <param id="0" name="Instance variable">VODone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="510879563198762" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="880451204145835" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="280493565374304" type="Next">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="949106555363743" type="System">
+                                    <param id="0" name="Seconds">0.45</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="180581280269603" type="Next">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="515822314104270">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="637399857539281" type="Next">
+                                    <param id="0" name="Instance variable">VODone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="102521435347787" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="576767568023079" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="942931604860899" type="Conclusion">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="835325006580604" type="System">
+                                    <param id="0" name="Seconds">0.45</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="109908197493773" type="Conclusion">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="290899225542770">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="535895766225226" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="503054076206147" type="System">
+                            <param id="0" name="First value">Touch.TouchCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="312642548576131" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="105341415467088">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="615742478740705" type="Touch">
+                                    <param id="0" name="Object">Next</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="854798606988521" type="Next" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="759155430814494" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="239583625632777" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="124562901764313" type="Next">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="734926567722870" type="Next">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="737457297016047" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="715941242672498">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="660465664593268" type="System" />
+                                <condition id="4" name="Is touching object" sid="469992394218541" type="Touch">
+                                    <param id="0" name="Object">Prev</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="241796363549577" type="Prev" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="122890577032008" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="645547245917080" type="Prev">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="389432514798292" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="951640902902794">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="501367840968150" type="System" />
+                                <condition id="4" name="Is touching object" sid="793673851936193" type="Touch">
+                                    <param id="0" name="Object">Menu</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="809648820613970" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="334954189913253" type="MenuBG" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="414837645523342" type="Menu">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="407777104888214" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="286438667632596">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="238803054524807" type="System" />
+                                <condition id="4" name="Is touching object" sid="400993644319875" type="Touch">
+                                    <param id="0" name="Object">Mute</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="290238409979646" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="255091702529101" type="Menu">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="234413875402645" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="391738238528642" type="Mute">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="501047184460149" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="854779997299888">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="495680681922773" type="System" />
+                                <condition id="4" name="Is touching object" sid="986005030719320" type="Touch">
+                                    <param id="0" name="Object">Home</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="324444444433019" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="154566104365777" type="Menu">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="279096969462538" type="Home">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="302818976075614" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="982436117705001">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="981582150923496" type="System" />
+                                <condition id="4" name="Is touching object" sid="463279324786494" type="Touch">
+                                    <param id="0" name="Object">Music</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="104561947380065" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="631218359182114" type="Menu">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="176422576795307" type="Music">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="773529012841485" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="814096141621524">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="418820551338359" type="System" />
+                                <condition id="4" name="Is touching object" sid="102731802509602" type="Touch">
+                                    <param id="0" name="Object">Thumbnails</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="155040222502229" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="464656489637241" type="Menu">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="216035467375270" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="343653852810103">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="734840561523349" type="System">
+                                            <param id="0" name="Variable">Autoplay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="350755016943149" type="Thumbnails">
+                                            <param id="0" name="Scale">0.9</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="183201017880360" type="Thumbnails">
+                                            <param id="0" name="Instance variable">active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="736414346844191">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="185404760287608" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="619936282334983" type="System">
+                                            <param id="0" name="Variable">Autoplay</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="955181431416058" type="Next">
+                                            <param id="0" name="Instance variable">VODone</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="276854133847555" type="Next">
+                                            <param id="0" name="Instance variable">VOTimer</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="307182149851082" type="Thumbnails">
+                                            <param id="0" name="Scale">0.9</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="161397674907739" type="Thumbnails">
+                                            <param id="0" name="Instance variable">active</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="172895536310298">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="638299967159935" type="System" />
+                                <condition id="4" name="Is touching object" sid="663761270249722" type="Touch">
+                                    <param id="0" name="Object">Conclusion</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="822371262654331" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="886615416794997" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="856319705718492" type="Conclusion">
+                                    <param id="0" name="Scale">0.9</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="126191133190360" type="Conclusion">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="249960950163534" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="559255964793950">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="875345237808355" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="979234748833406" type="System">
+                            <param id="0" name="First value">Touch.TouchCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="351083960536592" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="578909828371619">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="446099969491158" type="Touch">
+                                    <param id="0" name="Object">Next</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="380488211949705" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="151360643956548" type="Next">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="326679711383814" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="267728875849125" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="828664774929377" type="Function">
+                                    <param id="0" name="Name">&quot;NEXT&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="404931286728347">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="379079684030007" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="534315734806829" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="299497772097738" type="Next">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="117176228832206" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="302520815590069">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="765343853985042" type="Touch">
+                                    <param id="0" name="Object">Prev</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="278971253840110" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="553435776639919" type="Prev">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="881632891613443" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="613524465076016" type="Function">
+                                    <param id="0" name="Name">&quot;PREVIOUS&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="388280158042719">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="782608158712378" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="464177013318252" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="843117771178287" type="Prev">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="460488255865181" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="447566647445854">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="125358532824493" type="Touch">
+                                    <param id="0" name="Object">Menu</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="838151684480427" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="519873513151961" type="Menu">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="383069924098036" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="620822525253167">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="342110751813984" type="Menu">
+                                            <param id="0" name="Instance variable">step</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="999191360148790" type="MenuBG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="974351437405888" type="Menu">
+                                            <param id="0" name="Instance variable">step</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="445879728642334">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="268471904928522" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="416075543589159" type="Menu">
+                                            <param id="0" name="Instance variable">step</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="463851558422739" type="MenuBG">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="881346601455256" type="Menu">
+                                            <param id="0" name="Instance variable">step</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="127905298827606">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="177370301348576" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="376504548328070" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="123453192332378" type="Menu">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="843865604594244" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="450727673782398">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="338962083121666" type="Touch">
+                                    <param id="0" name="Object">Mute</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="274639200198735" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="117095145152033" type="Mute">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="283186014492282">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="800064098831378" type="System">
+                                            <param id="0" name="Variable">Mute</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="444562152709383" type="Function">
+                                            <param id="0" name="Name">&quot;VOMUTEON&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="117523152722000">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="784345080673505" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="397628793431663" type="Function">
+                                            <param id="0" name="Name">&quot;VOMUTEOFF&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="514962040914101">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="603196435982446" type="Mute">
+                                            <param id="0" name="Instance variable">active</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="898360953002781">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="569837985632854" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="124674663048038" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="443999331778255" type="Mute">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="721502175409697" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="968833987748328">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="311206920893306" type="Touch">
+                                    <param id="0" name="Object">Home</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="474901266921188" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="553166183968738" type="Home">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="691100027530176" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="477955990196884" type="System">
+                                    <param id="0" name="Seconds">0.15</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="219609153060606" type="System">
+                                    <param id="0" name="Layout">Home</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="273274153302428">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="977635278286811" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="464084410037501" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="962471796111985" type="Home">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="213768990532928" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372240418274660">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="200343965196834" type="Touch">
+                                    <param id="0" name="Object">Music</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="731373618395284" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="743019004890848" type="Music">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="786826328229426">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="602378030487487" type="System">
+                                            <param id="0" name="Variable">music</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="888293097875844" type="Function">
+                                            <param id="0" name="Name">&quot;MUSICON&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="235884382639790">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="827792316542750" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="469851330537592" type="Function">
+                                            <param id="0" name="Name">&quot;MUSICOFF&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="779231661332849">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="990014839473818" type="Music">
+                                            <param id="0" name="Instance variable">active</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="942265738587236">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="886381111944493" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="619350291587855" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="109334224875462" type="Music">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="387738223988131" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="861133083828092">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="670139220160855" type="Touch">
+                                    <param id="0" name="Object">Thumbnails</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="494601545781909" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="886881173722018" type="Thumbnails">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="232523910663915" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="361385516625674">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="426514520936112" type="System">
+                                            <param id="0" name="Variable">Mute</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="696889501620401" type="TN_Overlay">
+                                            <param id="0" name="Instance variable">voMuted</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="854083000916337">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="731618218608411" type="TN_Drag">
+                                            <param id="0" name="Y">ViewportTop(&quot;Thumbnails&quot;)+5</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="919526049622916" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="107733964539633" type="Function">
+                                            <param id="0" name="Name">&quot;VOMUTEON&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="467206846932169" type="System">
+                                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="302184111301905">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="777394042512594" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="162948545898875" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="272759022305355" type="Thumbnails">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="276160343764424" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="732193010596576">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="280647015638099" type="Touch">
+                                    <param id="0" name="Object">Conclusion</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="232523709350024" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="644278389708293" type="Conclusion">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="965649885191064" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="498528402697786" type="System">
+                                    <param id="0" name="Variable">go_next_done</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="478211404830090" type="System">
+                                    <param id="0" name="Seconds">0.15</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="309916733799965" type="System">
+                                    <param id="0" name="Layout">Conclusion</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="348864316121223">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="604385442928631" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="275852450147665" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="280456620371175" type="Conclusion">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="418351797975685" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="130687617029445" title="Button_Cancel">
+                    <sub-events>
+                        <event-block sid="736509686153946">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="346907398659036" type="Touch">
+                                    <param id="0" name="Object">Menu</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="481122037026951" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="196045501049507" type="Menu">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="454617633912966" type="Menu">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="856304058135252">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="331502501452303" type="Touch">
+                                    <param id="0" name="Object">Home</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="805075309955071" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="799140160787708" type="Home">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="753663009875164" type="Home">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="516382173289278">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="881485580727968" type="Touch">
+                                    <param id="0" name="Object">Music</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="213130828728370" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="445962313778592" type="Music">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="390018741888442" type="Music">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="367379714694563">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="450406845236592" type="Touch">
+                                    <param id="0" name="Object">Mute</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="264734466129947" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="163143105429530" type="Mute">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="748837295167111" type="Mute">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="646032174579140">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="563945793178760" type="Touch">
+                                    <param id="0" name="Object">Next</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="667540012697772" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="527029466238110" type="Next">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="643395126720733" type="Next">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="657179803996870">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="753361492217189" type="Touch">
+                                    <param id="0" name="Object">Prev</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="881103389885949" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="712222120965338" type="Prev">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="120971181684405" type="Prev">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="784937500691817">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="137608834202178" type="Touch">
+                                    <param id="0" name="Object">Thumbnails</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="404343983511042" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="426408013004975" type="Thumbnails">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="593692532953590" type="Thumbnails">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="970439596194437">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="268602331599817" type="Touch">
+                                    <param id="0" name="Object">Conclusion</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="220840761016465" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="102115116910728" type="Conclusion">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="882176985616269" type="Conclusion">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="867599762332175">
+                    <conditions>
+                        <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="547711353034562" type="text" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="224958700089298" type="clickMe">
+                            <param id="0" name="Function">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="910973972732099" type="clickMe">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803823561099834">
+                    <conditions>
+                        <condition id="1" name="On any finished" sid="696736595186597" type="text" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Pause animation" sid="656977479698443" type="clickMe" />
+                        <action id="4" name="Set current time in animation" sid="747268867994481" type="clickMe">
+                            <param id="0" name="time units">0</param>
+                            <param id="1" name="New Position">0</param>
+                        </action>
+                        <action disabled="1" id="-13" name="Set boolean" sid="728902126817817" type="Next">
+                            <param id="0" name="Instance variable">VODone</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="750031618188310">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="485947733664384" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="222307715322726" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Call function" sid="548904288278546" type="Function">
+                                    <param id="0" name="Name">&quot;NEXT&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="765609062764805">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="750164723567185" type="Next">
+                                            <param id="0" name="Instance variable">End_pageno</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(LayoutName)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="288069451953430" type="System">
+                                            <param id="0" name="Seconds">1.2</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="310990308792260" type="System">
+                                            <param id="0" name="Layout">Conclusion</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="146635406643671">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="130328091658173" type="Touch">
+                            <param id="0" name="Object">clickMeFamily</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="489943790609867" type="System">
+                            <param id="0" name="First value">Touch.TouchCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="855491414699682" type="clickMe" />
+                        <condition behavior="LiteTween" id="7" inverted="1" name="Is reversing" sid="664177309976889" type="clickMe" />
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="781866425984692" type="text" />
+                        <condition behavior="LiteTween" id="7" inverted="1" name="Is reversing" sid="843775360158766" type="text" />
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="353479252430259" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="543381985444161" type="clickMe">
+                            <param id="0" name="Function">2</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="551487262624404" type="clickMe">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="131638221656470" type="text">
+                            <param id="0" name="Function">17</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="101832455799061" type="text">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">1</param>
+                            <param id="2" name="Value">-(text.width)-150</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="992690325939172" type="text">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="609367610988173">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="917460605625472" type="Touch">
+                            <param id="0" name="Object">Restart</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="996496777106976" type="System">
+                            <param id="0" name="First value">Touch.TouchCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="476959283374864" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="895636849003118" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                        </action>
+                        <action disabled="1" id="6" name="Resume animation" sid="970147243149632" type="clickMe" />
+                        <action id="4" name="Set current time in animation" sid="681794649444347" type="clickMe">
+                            <param id="0" name="time units">0</param>
+                            <param id="1" name="New Position">0</param>
+                        </action>
+                        <action id="4" name="Set current time in animation" sid="784133592576746" type="text">
+                            <param id="0" name="time units">0</param>
+                            <param id="1" name="New Position">0</param>
+                        </action>
+                        <action id="6" name="Resume animation" sid="511473122591573" type="text" />
+                        <action id="7" name="Play (by name)" sid="432153164640211" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">str(LayoutName)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">Vo</param>
+                            <param id="2" name="Tag (optional)">&quot;_VO_&quot;</param>
+                        </action>
+                        <action id="23" name="Seek to" sid="926668556479533" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                            <param id="1" name="Position">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="259280343642420" type="Next">
+                            <param id="0" name="Instance variable">VOTimer</param>
+                            <param id="1" name="Value">Self.VOTime</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="974309960165249">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="854804903583175" type="System">
+                                    <param id="0" name="Variable">Mute</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="331002233016306" type="Mute">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="144920185687340" type="System">
+                                    <param id="0" name="Variable">Mute</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="674185912329095">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="258021307887552" type="Touch">
+                            <param id="0" name="Object">textBTN</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="278355788746585" type="System">
+                            <param id="0" name="First value">Touch.TouchCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="608436195878990" type="clickMe" />
+                        <condition behavior="LiteTween" id="7" inverted="1" name="Is reversing" sid="405376965837547" type="clickMe" />
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="452078633888740" type="text" />
+                        <condition behavior="LiteTween" id="7" inverted="1" name="Is reversing" sid="309497994651714" type="text" />
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="707259238218790" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="395381777232344" type="Touch">
+                            <param id="0" name="Object">UIBTNS</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="301984537050123" type="text">
+                            <param id="0" name="Function">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="587715009748078" type="text">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906859684454729">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="531755979172505" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="360387783000325" type="Touch">
+                            <param id="0" name="Object">UIBTNS</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="450737117672471" type="Touch">
+                            <param id="0" name="Object">clickMeFamily</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="147617261177952" type="Touch">
+                            <param id="0" name="Object">textBTN</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="161814819585480" type="Touch">
+                            <param id="0" name="Object">Restart</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="955283679959795" type="Touch">
+                            <param id="0" name="Object">Conclusion</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="635009539918002" type="System">
+                            <param id="0" name="Layer">&quot;Thumbnails&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="716570569064895" type="Function">
+                            <param id="0" name="Name">&quot;touch_function&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

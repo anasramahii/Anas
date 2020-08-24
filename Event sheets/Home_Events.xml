@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Home_Events</name>
+    <events>
+        <include>Lamsa4Events</include>
+        <comment>Reset Mute and autoplay&#x0D;&#x0A;Stop BGM&#x0D;&#x0A;Make stars visible&#x0D;&#x0A;Set layout if coming from load page or any other page</comment>
+        <event-block sid="396853684301108">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="101803175042618" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="466222873344156" type="System">
+                    <param id="0" name="Variable">Mute</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="359490622292870" type="System">
+                    <param id="0" name="Variable">Autoplay</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Stop" sid="240017825930322" type="Audio">
+                    <param id="0" name="Tag">&quot;_MUSIC_&quot;</param>
+                </action>
+                <action behavior="LiteTween" id="1" name="Set duration" sid="667334333163150" type="Load_StarNew">
+                    <param id="0" name="Duration">random(0.3,0.8)</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="692019963206517" type="Load_WhiteBG">
+                    <param id="0" name="Pin to">Load_Final</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="760590164954419" type="Load_cover">
+                    <param id="0" name="Pin to">Load_book</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="434820903860410" type="Load_StarNew">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="594540003868474">
+                    <conditions>
+                        <condition id="-13" name="Is between angles" sid="981337602231905" type="Load_cloudFG">
+                            <param id="0" name="First angle">175</param>
+                            <param id="1" name="Second angle">185</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="566046532873622" type="Load_cloudFG">
+                            <param id="0" name="Pin to">Load_Final</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="437980198640810">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="559246871314529" type="System">
+                            <param id="0" name="Variable">fromLoad</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="293210371557598" type="System">
+                            <param id="0" name="Layer">&quot;Buttons&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="374971438783838" type="System">
+                            <param id="0" name="Variable">fromLoad</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="870012891677897">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="931189867284674" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="671588175220130" type="System">
+                            <param id="0" name="Layer">&quot;FromLoad&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="812857320430693" type="Load_Final" />
+                        <action id="-1" name="Set X" sid="738807707552152" type="Load_TransparentCloud">
+                            <param id="0" name="X">Self.X + 1280</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Make stars invisible as they are global but needs to be visible again once coming back to home page</comment>
+        <event-block sid="753160596525464">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="189651361137831" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="151138787211736" type="Load_StarNew">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Buttons events for Autoplay and Interactive modes</comment>
+        <event-block sid="715228347401740">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="430535864253643" type="Touch" />
+                <condition id="-8" name="Compare two values" sid="421743798503279" type="System">
+                    <param id="0" name="First value">Touch.TouchCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="784353761845981" type="System">
+                    <param id="0" name="Layer">&quot;Buttons&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="330615872055370" type="System">
+                    <param id="0" name="Layer">&quot;FromLoad&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="580084284317464">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="652980430613363" type="Touch">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="681870075501312" type="Interactive">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="916128489562666" type="Interactive">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="571311173081442" type="Interactive">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="311690503543347">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="579804366796629" type="System" />
+                        <condition id="4" name="Is touching object" sid="260522769156336" type="Touch">
+                            <param id="0" name="Object">Autoplay</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="560129986297324" type="Autoplay">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="922545734419194" type="Autoplay">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="891485810244347" type="Autoplay">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="146027321119995">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="130933971290914" type="System" />
+                        <condition id="4" name="Is touching object" sid="431191922112718" type="Touch">
+                            <param id="0" name="Object">Load_book</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="639052689838050" type="Load_book">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="396112576366403" type="Load_book">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="318721616778092" type="Load_cover">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="381634242353176" type="Load_book">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="679341223412361">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="853401949805002" type="Touch" />
+                <condition id="-8" name="Compare two values" sid="423787913668938" type="System">
+                    <param id="0" name="First value">Touch.TouchCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="291292101120591" type="System">
+                    <param id="0" name="Layer">&quot;Buttons&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="115673832398016" type="System">
+                    <param id="0" name="Layer">&quot;FromLoad&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="910077897122489">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="876535766999243" type="Touch">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="608338769781178" type="Interactive">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="705291476275343" type="Interactive">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="755400331595950" type="System">
+                            <param id="0" name="Variable">Autoplay</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="403206886700842" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Play" sid="704687102511167" type="Audio">
+                            <param id="0" name="Audio file">Click Story Mode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sfx</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="256178180308515" type="System">
+                            <param id="0" name="Layout">Cover</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="820237441368600">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="203738250695210" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="348736550748510" type="Interactive">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="719894499529128" type="Interactive">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="275581332562469" type="Interactive">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="636032789873313">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="541437317468080" type="Touch">
+                            <param id="0" name="Object">Autoplay</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="230370276214016" type="Autoplay">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="487826230133016" type="Autoplay">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="385569959231284" type="System">
+                            <param id="0" name="Variable">Autoplay</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="935441561202280" type="Audio">
+                            <param id="0" name="Audio file">Click Story Mode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sfx</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="899074836469821" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="409719700285285" type="System">
+                            <param id="0" name="Layout">Cover</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="114065337393794">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="959031818852373" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="742970012266960" type="Autoplay">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="194375031640925" type="Autoplay">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="497789393790791" type="Autoplay">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961060266465599">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="923695325170856" type="Touch">
+                            <param id="0" name="Object">Load_book</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="960920576206537" type="Load_book">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="588775260630865" type="Load_book">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="356499256355741" type="Load_cover">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="230573079960026">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="915443304955028" type="Autoplay" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="974288390724226" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="103039653534678" type="Audio">
+                                    <param id="0" name="Audio file">Click Story Mode</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sfx</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="321219352349034" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="169013412772067" type="System">
+                                    <param id="0" name="Layout">Cover</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="459604918225258">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="373521264759200" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="816887044141038" type="System">
+                                    <param id="0" name="Variable">Autoplay</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="384602514403193" type="Audio">
+                                    <param id="0" name="Audio file">Click Story Mode</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sfx</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="953096039632607" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="854732857384156" type="System">
+                                    <param id="0" name="Layout">Cover</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="631879862188404">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="717055660674488" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="588546524506298" type="Load_book">
+                            <param id="0" name="Instance variable">active</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="126978488986037" type="Load_book">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="648531690429041" type="Load_cover">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="324106270999608" type="Load_book">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Load image movements</comment>
+        <event-block sid="528576013534922">
+            <conditions>
+                <condition behavior="LiteTween" id="4" name="On tween end" sid="152048110749742" type="Load_Final" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="375077190219605">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="151284717007786" type="Load_Final">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="788676446917065" type="Load_Final">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="691447133825951" type="Load_Final">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.X</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="459473586129695" type="Load_Final">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-969</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="668099001004896" type="Load_Final">
+                            <param id="0" name="Duration">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="145264713695765" type="Load_Final">
+                            <param id="0" name="Function">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="830658000374174" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="592434331897778" type="Load_Final">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="486036820158588" type="Audio">
+                            <param id="0" name="Audio file">Transition</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">music</param>
+                            <param id="1" name="Tag (optional)">&quot;BGM&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="448985975974656" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="302293110019659" type="System">
+                            <param id="0" name="Layer">&quot;Buttons&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208327506954857">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="456981880142195" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="859841775411597" type="Load_Final">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="394814007173770" type="Load_Final">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="152800580120380" type="System">
+                            <param id="0" name="Layer">&quot;FromLoad&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>BG cloud Scroll </comment>
+        <event-block sid="501187941348425">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="296150471534152" type="Load_TransparentCloud">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">1280 + (Self.Width*0.5) + 5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="125056895667798" type="Load_TransparentCloud">
+                    <param id="0" name="X">-(Self.Width*0.5) - 5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

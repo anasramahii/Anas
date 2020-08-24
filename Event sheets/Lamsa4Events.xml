@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Lamsa4Events</name>
+    <events>
+        <event-block sid="388842551874615">
+            <conditions>
+                <condition id="0" name="On function" sid="830009639942964" type="Function">
+                    <param id="0" name="Name">&quot;NEXT&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="296443540359605" type="System">
+                    <param id="0" name="Layout">str(int(LayoutName)+1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="638843880058503">
+            <conditions>
+                <condition id="0" name="On function" sid="492386214731382" type="Function">
+                    <param id="0" name="Name">&quot;PREVIOUS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="462520376114007" type="System">
+                    <param id="0" name="Layout">str(int(LayoutName)-1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="144392795134025">
+            <conditions>
+                <condition id="0" name="On function" sid="340008048262336" type="Function">
+                    <param id="0" name="Name">&quot;VOMUTEOFF&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="171399673273235">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="380563345882412" type="Mute">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="336804215135075" type="Mute">
+                            <param id="0" name="Instance variable">click</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="963253850808620" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="432464055409825" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                            <param id="1" name="dB">Vo</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446789983120058" type="System">
+                            <param id="0" name="Variable">Mute</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="449359803496203">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="275374597134462" type="Audio">
+                                    <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Resume animation" sid="519603229693428" type="text" />
+                                <action disabled="1" id="6" name="Resume animation" sid="243776261049825" type="clickMe" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="100572818707283">
+            <conditions>
+                <condition id="0" name="On function" sid="169768333725993" type="Function">
+                    <param id="0" name="Name">&quot;VOMUTEON&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="150062574368251">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="742772867094156" type="Mute">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="356621603944169" type="Mute">
+                            <param id="0" name="Instance variable">click</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Pause animation" sid="464968487073012" type="text" />
+                        <action id="5" name="Pause animation" sid="673005760551376" type="clickMe" />
+                        <action id="4" name="Set current time in animation" sid="167789652150613" type="clickMe">
+                            <param id="0" name="time units">0</param>
+                            <param id="1" name="New Position">0</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="367540374037967" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="669446712547765" type="Audio">
+                            <param id="0" name="Tag">&quot;_VO_&quot;</param>
+                            <param id="1" name="dB">Vo</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="502597909575372" type="System">
+                            <param id="0" name="Variable">Mute</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="844635981763687">
+            <conditions>
+                <condition id="0" name="On function" sid="412748534262977" type="Function">
+                    <param id="0" name="Name">&quot;MUSICON&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="255147011187427" type="System">
+                    <param id="0" name="Variable">music</param>
+                    <param id="1" name="Value">-7</param>
+                </action>
+                <action id="3" name="Set volume" sid="683072691956316" type="Audio">
+                    <param id="0" name="Tag">&quot;_MUSIC_&quot;</param>
+                    <param id="1" name="dB">music</param>
+                </action>
+                <action id="5" name="Set frame" sid="577567011490655" type="Music">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="486682056012137">
+            <conditions>
+                <condition id="0" name="On function" sid="106804330250247" type="Function">
+                    <param id="0" name="Name">&quot;MUSICOFF&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="237782830559439" type="System">
+                    <param id="0" name="Variable">music</param>
+                    <param id="1" name="Value">-100</param>
+                </action>
+                <action id="3" name="Set volume" sid="812804834881161" type="Audio">
+                    <param id="0" name="Tag">&quot;_MUSIC_&quot;</param>
+                    <param id="1" name="dB">music</param>
+                </action>
+                <action id="5" name="Set frame" sid="439892192788587" type="Music">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

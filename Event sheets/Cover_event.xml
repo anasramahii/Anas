@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cover_event</name>
+    <events>
+        <include>Lamsa4Events</include>
+        <event-block sid="910741401087122">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="278831130309848" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="818467245360069">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="935524556002691" type="System">
+                            <param id="0" name="Variable">Autoplay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Execute" sid="335753605955775" type="CallJS">
+                            <param id="0" name="Value">&quot;MODESELECT(2)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240272829104079">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="345216065567557" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Execute" sid="329189982967577" type="CallJS">
+                            <param id="0" name="Value">&quot;MODESELECT(1)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="963802212747459">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="923025653536465" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="161667502083750" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="0" name="Play" sid="705289807861071" type="Audio">
+                    <param id="0" name="Audio file">Title</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">vo</param>
+                    <param id="1" name="Tag (optional)">&quot;title&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="660842430155196" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="0" name="Play" sid="944616297217028" type="Audio">
+                    <param id="0" name="Audio file">Music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">music</param>
+                    <param id="1" name="Tag (optional)">&quot;_MUSIC_&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="215458841577262" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="329223658715911" type="System">
+                    <param id="0" name="Layout">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

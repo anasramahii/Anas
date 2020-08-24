@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Load_Events</name>
+    <events>
+        <include>Lamsa4Events</include>
+        <variable constant="0" name="music" sid="310561809548366" static="0" type="number">-9</variable>
+        <variable constant="0" name="sfx" sid="176013608752674" static="0" type="number">0</variable>
+        <variable constant="0" name="vo" sid="503960719651592" static="0" type="number">-3</variable>
+        <variable constant="0" name="Initial_Dev" sid="158636604941724" static="0" type="number">0</variable>
+        <variable constant="0" name="vo_available" sid="941683403063980" static="0" type="number">0</variable>
+        <variable constant="0" name="fromLoad" sid="810483658531196" static="0" type="number">0</variable>
+        <variable constant="0" name="Mute" sid="733479254144194" static="0" type="number">1</variable>
+        <variable constant="0" name="Autoplay" sid="723836655750201" static="0" type="number">0</variable>
+        <variable constant="0" name="go_next_time" sid="524180500637783" static="0" type="number">0</variable>
+        <variable constant="0" name="go_next_done" sid="982080018937310" static="0" type="number">0</variable>
+        <variable constant="0" name="Spriter_Load" sid="606045585717412" static="0" type="number">0</variable>
+        <event-group description="Preload on start and increase loadspeed variable after all preloads" sid="689242103689234" title="Preloads">
+            <sub-events>
+                <event-block sid="692592236698064">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="844888970826533" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Preload" sid="711827087799496" type="Audio">
+                            <param id="0" name="Audio file">Click Story Mode</param>
+                        </action>
+                        <action id="4" name="Preload" sid="171386963084441" type="Audio">
+                            <param id="0" name="Audio file">Fall down Lose</param>
+                        </action>
+                        <action id="4" name="Preload" sid="775625244556383" type="Audio">
+                            <param id="0" name="Audio file">Jump click 1</param>
+                        </action>
+                        <action id="4" name="Preload" sid="466035776893482" type="Audio">
+                            <param id="0" name="Audio file">Jump click 2</param>
+                        </action>
+                        <action id="4" name="Preload" sid="435236615226130" type="Audio">
+                            <param id="0" name="Audio file">Long Jump finish</param>
+                        </action>
+                        <action id="4" name="Preload" sid="680313546733274" type="Audio">
+                            <param id="0" name="Audio file">Transition</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>BGM</comment>
+                        <event-block sid="291254635061621">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <comment>SFX</comment>
+                        <event-block sid="948505823337789">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <comment>P1</comment>
+                            </sub-events>
+                        </event-block>
+                        <comment>VO</comment>
+                        <event-block sid="294812913182854">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="627171958336790">
+                    <conditions>
+                        <condition id="1" name="Preloads complete" sid="354367270624974" type="Audio" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="387369622585324" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">loaded</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="266870295619978" type="System">
+                            <param id="0" name="Variable">Spriter_Load</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="907134360057474" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="968637835421192" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">loadSpeed</param>
+                            <param id="1" name="Value">600</param>
+                        </action>
+                        <action id="0" name="Execute" sid="934401815165315" type="CallJS">
+                            <param id="0" name="Value">&quot;LOADCOMPLETE()&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="396260122809953">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="833025680474996" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="108261074396173" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">loaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="0" name="Execute" sid="525614734012503" type="CallJS">
+                            <param id="0" name="Value">&quot;nexttime()&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="818113876517443" type="System">
+                            <param id="0" name="Variable">go_next_time</param>
+                            <param id="1" name="Value">CallJS.ReadExecutionReturn</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="421371856381296" type="System">
+                            <param id="0" name="Object to create">clickMe</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-5000</param>
+                            <param id="3" name="Y">-5000</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="489584683984160">
+                            <conditions>
+                                <condition id="1" name="Preloads complete" sid="285033273959086" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="438765384827570" type="Load_LoadBG">
+                                    <param id="0" name="Instance variable">loadSpeed</param>
+                                    <param id="1" name="Value">150</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="891244290737227" title="Load Bar">
+            <sub-events>
+                <event-block sid="903358306126099">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="181233877920494" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="189669587075198">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="778682470556094" type="Load_Mask">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="833890506654736" type="Load_Mask">
+                                    <param id="0" name="X">Self.X - (dt*Load_LoadBG.loadSpeed)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="223676159238967">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="182360370881801" type="Load_Mask">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">30</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="750815536015295" type="Load_Mask">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="503117686920321" type="Load_LoadBG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="158865881500273" type="Load_Bar">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="243424024279316">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="975552732254927" type="Load_Adam">
+                                                    <param id="0" name="Instance variable">stopClouds</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="593593982476660" type="Load_LoadBG">
+                                                    <param id="0" name="Instance variable">allLoaded</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action behavior="LiteTween" id="10" name="Start" sid="370451663287063" type="Load_DarkCloud">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="333246410720290" type="Load_thunder" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="784577178157015">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="709682817403158" type="Load_Mask">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">250</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="538765189454420">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Preloads complete" sid="584920331780666" type="Audio" />
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="482527832534241" type="Load_LoadBG">
+                                                    <param id="0" name="Instance variable">loaded</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="825841422111202" type="Load_LoadBG">
+                                                    <param id="0" name="Instance variable">loadSpeed</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="202908736190599" title="Load_Game">
+            <sub-events>
+                <event-block sid="394185246192353">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="190316536340696" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="647668894950943" type="Load_CloudTrail">
+                            <param id="0" name="Pin to">Load_PlayerCloud</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="376575733217247" type="Load_thunder">
+                            <param id="0" name="Pin to">Load_DarkCloud</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="992213260916625" type="Load_StarNew">
+                            <param id="0" name="Duration">random(0.3,0.8)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="temp" sid="149339750539778" static="0" type="number">0</variable>
+                        <event-block sid="164800383664759">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="251303438907393" type="System">
+                                    <param id="0" name="Variable">temp</param>
+                                    <param id="1" name="Value">random(100)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="506167436427319">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="491412599599472" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="586067424617319" type="Load_Adam">
+                                            <param id="0" name="Instance variable">Joury</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="693710365290155" type="Load_Adam">
+                                            <param id="0" name="Animation">&quot;J_Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Click to Jump</comment>
+                <event-block sid="185422940327978">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="139951773251954" type="Touch" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="964231884757568">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="479797205518807" type="Load_Adam">
+                                    <param id="0" name="Instance variable">stopClouds</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="851403081251871" type="Load_LoadBG">
+                                    <param id="0" name="Instance variable">allLoaded</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="633671397261423" type="Load_Adam">
+                                    <param id="0" name="Instance variable">doubleJumping</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="531631157983062" type="Load_Adam">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="135827969992742" type="Load_Adam">
+                                    <param id="0" name="Instance variable">touchedOnce</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="418359746144795">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="122604058811612" type="Load_Adam">
+                                            <param id="0" name="Instance variable">Joury</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="295767658884041" type="Load_Adam">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="873137106080369">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="779368139228087" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="825442873911213" type="Load_Adam">
+                                            <param id="0" name="Animation">&quot;J_Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="473236096364457">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="595540276282053" type="Load_Adam">
+                                            <param id="0" name="Instance variable">jumping</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="590138303706924" type="Audio">
+                                            <param id="0" name="Audio file">Jump click 1</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">sfx-6</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="501481174410928" type="Load_Adam">
+                                            <param id="0" name="Instance variable">jumping</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="153668425915034">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="235486081348885" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="739027698589885" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="647978382215394" type="Audio">
+                                            <param id="0" name="Audio file">Jump click 2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">sfx-6</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="530081333539970" type="Load_Adam">
+                                            <param id="0" name="Instance variable">jumping</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="980466157916321" type="Load_Adam">
+                                            <param id="0" name="Instance variable">doubleJumping</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Create clouds</comment>
+                <event-block sid="898716143057549">
+                    <conditions>
+                        <condition id="0" name="On function" sid="726089677186232" type="Function">
+                            <param id="0" name="Name">&quot;CreateDarkCloud&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="temp" sid="115825415096531" static="0" type="number">0</variable>
+                        <event-block sid="405553566256279">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="564131570228623" type="System">
+                                    <param id="0" name="Variable">temp</param>
+                                    <param id="1" name="Value">random(100)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="799598457068428">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="137033084943709" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="531577796220808" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="707090002382709" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="881181416837461">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="920924949987671" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="710739334031270" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="940624245364792" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="109239514431019" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="316006361176063" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="375672821587067" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150 - Load_DarkCloud.ImageWidth</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="773297578083354" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="847708738827094">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="313970379036172" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="372384599411309" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">60</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="294115732896879" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="169694133347222" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150 - Load_DarkCloud.ImageWidth</param>
+                                            <param id="3" name="Y">403 - Load_DarkCloud.ImageHeight</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="477125459012180" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="235654299448596" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="315666407435394" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="222486344646134">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="784410636248307" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="925084328560761" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">80</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="645552241061977" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="592936796303973" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403 - Load_DarkCloud.ImageHeight</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="803773359614747" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="334584265462083" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150 - Load_DarkCloud.ImageWidth</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="245051446498515" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="964590703968798">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="345975182949320" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="572869916552292" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">80</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="665296097208516" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403 - Load_DarkCloud.ImageHeight</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="854480991512909" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="295794163552463" type="System">
+                                            <param id="0" name="Object to create">Load_DarkCloud</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">-150</param>
+                                            <param id="3" name="Y">403</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="462852279854280" type="Function">
+                                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                                            <param id="1" name="Parameter {n}">Load_DarkCloud.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Create thunder on clouds</comment>
+                <event-block sid="988354229808803">
+                    <conditions>
+                        <condition id="0" name="On function" sid="380670738079092" type="Function">
+                            <param id="0" name="Name">&quot;CreateThunder&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="temp" sid="199609470148536" static="0" type="number">0</variable>
+                        <event-block sid="380128665453224">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="518154685737516" type="Load_DarkCloud">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="146012128686341" type="System">
+                                    <param id="0" name="Variable">temp</param>
+                                    <param id="1" name="Value">random(120)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>1 thunder strike</comment>
+                                <event-block sid="674595731761374">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="923048622043005" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="995764302872691" type="System">
+                                            <param id="0" name="Object to create">Load_thunder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">random(Load_DarkCloud.X-20, Load_DarkCloud.X+20)</param>
+                                            <param id="3" name="Y">Load_DarkCloud.Y + 42</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="341336665628158" type="Load_thunder">
+                                            <param id="0" name="Pin to">Load_DarkCloud</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>2 thunder strike</comment>
+                                <event-block sid="259362987637490">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="857150920456588" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="580883558529950" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">80</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="983764692465065" type="System">
+                                            <param id="0" name="Variable">temp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="281876668716465" type="System">
+                                            <param id="0" name="Object to create">Load_thunder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">random(Load_DarkCloud.X-20, Load_DarkCloud.X+20)</param>
+                                            <param id="3" name="Y">Load_DarkCloud.Y + 42</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="472005835952714" type="Load_thunder">
+                                            <param id="0" name="Pin to">Load_DarkCloud</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="394352818070175" type="System">
+                                            <param id="0" name="Object to create">Load_thunder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">random(Load_DarkCloud.X-20, Load_DarkCloud.X+20)</param>
+                                            <param id="3" name="Y">Load_DarkCloud.Y + 55</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="700511739989781" type="Load_thunder">
+                                            <param id="0" name="Scale">0.7</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="728066989328522" type="Load_thunder">
+                                            <param id="0" name="Pin to">Load_DarkCloud</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Call create cloud function</comment>
+                <event-block sid="227327335073086">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="374818215373870" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,2.5)</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="160006537325730" type="Load_Adam">
+                            <param id="0" name="Instance variable">stopClouds</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="907987405672172" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">allLoaded</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="936229443047395" type="Function">
+                            <param id="0" name="Name">&quot;CreateDarkCloud&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Destroy cloud outside layout</comment>
+                <event-block sid="236071287705261">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="182940569335122" type="Load_DarkCloud">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">1600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="523241629121379" type="Load_DarkCloud" />
+                    </actions>
+                </event-block>
+                <comment>Player hits cloud and falls</comment>
+                <event-block sid="488976202833871">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="689312890772145" type="Load_Adam">
+                            <param id="0" name="Object">Load_DarkCloud</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="733519190108693" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">allLoaded</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="529562784680351" type="Load_Adam">
+                            <param id="0" name="Instance variable">stopClouds</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="643900107068855" type="Load_PlayerCloud">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="616441560570161" type="Load_Adam">
+                            <param id="0" name="Instance variable">stopClouds</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="520743078211655" type="Load_Adam">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="753390768826070">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="524344966043361" type="Load_Adam">
+                                    <param id="0" name="Instance variable">Joury</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="813955207628567" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;Fall&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509652439469028">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="568167472344105" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="956390313534512" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;J_Fall&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="379119616883494">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="608418612085414" type="Load_Adam">
+                                    <param id="0" name="Instance variable">touchedOnce</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="317120571573988" type="Audio">
+                                    <param id="0" name="Audio file">Fall down Lose</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sfx-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Player cloud goes to get player</comment>
+                <event-block sid="750447059589763">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="532840034199831" type="Load_Adam">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">700</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="117382374619909" type="Load_Adam">
+                            <param id="0" name="Instance variable">gameDone</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="955085067248653" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="924934761064655" type="Load_PlayerCloud">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Stop player from falling and end of level</comment>
+                <event-block sid="972913493041108">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="662420290052932" type="Load_Adam">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">900</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="452378916332010" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Stop player</comment>
+                        <event-block sid="793642123839696">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="712067703978603" type="Load_Adam">
+                                    <param id="0" name="Instance variable">gameDone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="231414806330209" type="Load_Adam">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="687872375989311" type="Load_Adam">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>End of level</comment>
+                        <event-block sid="829439399810244">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="492128476460561" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="802626886906525" type="Load_Adam">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="885111703704080" type="Load_Adam">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="591325097788874" type="Load_TransparentCloud">
+                                    <param id="0" name="Speed">200</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="793149966154695" type="Load_cloudPan">
+                                    <param id="0" name="Speed">200</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="717826245540270" type="Load_TransparentCloud">
+                                    <param id="0" name="Angle">45</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="472489986424326" type="Load_cloudPan">
+                                    <param id="0" name="Angle">45</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="306359497882593" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="358924865115432" type="System">
+                                    <param id="0" name="Variable">fromLoad</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="171145248757192" type="System">
+                                    <param id="0" name="Layout">Home</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Bringing player back after falling</comment>
+                <event-block sid="346279647556585">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="351927194405595" type="Load_PlayerCloud" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="797253929663404">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="476012449149601" type="Load_Adam">
+                                    <param id="0" name="Instance variable">gameDone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="662380730418709" type="Load_PlayerCloud">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="820093534213000" type="Load_Adam">
+                                    <param id="0" name="X">Load_PlayerCloud.X + 2</param>
+                                    <param id="1" name="Y">Load_PlayerCloud.Y - 78</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="877774527115678" type="Load_Adam">
+                                    <param id="0" name="Pin to">Load_PlayerCloud</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="643321181982567">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="986574735526104" type="Load_Adam">
+                                            <param id="0" name="Instance variable">Joury</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="113470937162535" type="Load_Adam">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="122163464337984">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="539794747338896" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="304894723920769" type="Load_Adam">
+                                            <param id="0" name="Animation">&quot;J_Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="825172394957890">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="335188232419492" type="System">
+                                            <param id="0" name="Seconds">0.75</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="736624535790154" type="Load_PlayerCloud">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Restart game after player in position</comment>
+                <event-block sid="541935152718791">
+                    <conditions>
+                        <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="739283711271770" type="Load_PlayerCloud" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="149667333362861" type="Load_Adam">
+                            <param id="0" name="Instance variable">stopClouds</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="453361933295394" type="Load_Adam" />
+                        <action behavior="Platform" id="11" name="Set enabled" sid="909514993836084" type="Load_Adam">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Reset</comment>
+                <event-block sid="924946941923654">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="580876367263908" type="Load_Adam" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="220069712050638" type="Load_Adam">
+                            <param id="0" name="Instance variable">doubleJumping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="961215939114718" type="Load_Adam">
+                            <param id="0" name="Instance variable">jumping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="694624288410644">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="226239211332922" type="Load_Adam">
+                                    <param id="0" name="Instance variable">Joury</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="596913419072181" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="434033349915539">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="344114832215528" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="504272851290570" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;J_Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>BG clouds scrolling</comment>
+                <event-block sid="660195890000061">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="648476315352075" type="Load_cloudPan">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">1800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="390033526922415" type="Load_cloudPan">
+                            <param id="0" name="X">Self.X - (739*4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>BG clouds scrolling</comment>
+                <event-block sid="315570567880030">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="987604178274028" type="Load_TransparentCloud">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(0) + Self.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="651755088571902" type="Load_TransparentCloud">
+                            <param id="0" name="X">ViewportLeft(0) - Self.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>BG stars scrolling</comment>
+                <event-block sid="738319197976475">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="669738466458316" type="Load_StarNew">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(0) + Self.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="563676461195820" type="Load_StarNew">
+                            <param id="0" name="X">ViewportLeft(0) - Self.Width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Player jumps down once in position</comment>
+                <event-block sid="504858139520165">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="710544656324660" type="Load_Adam">
+                            <param id="0" name="Instance variable">stopClouds</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="478308064143511" type="Load_LoadBG">
+                            <param id="0" name="Instance variable">allLoaded</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="341550594496737" type="Load_Adam" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="753486089115069" type="Load_Adam">
+                            <param id="0" name="Instance variable">gameDone</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="910026567405284" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="748812688986100" type="Load_Adam">
+                            <param id="0" name="Instance variable">gameDone</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="498087406380486" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="483077067855194" type="Load_Adam">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="168065638736840" type="Load_Adam">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="522794942823211" type="Load_Adam">
+                            <param id="0" name="Speed">-200</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="981649802047281" type="Load_Adam">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="373821907870285" type="Load_PlayerCloud">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">1800</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="743383910748013" type="Load_PlayerCloud">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">Self.Y</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="302827254599771" type="Load_PlayerCloud">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="100541837486655">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="915138805754756" type="Load_Adam">
+                                    <param id="0" name="Instance variable">touchedOnce</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="567472155530924" type="Audio">
+                                    <param id="0" name="Audio file">Long Jump finish</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sfx-6</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="123948048330899">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="226707905283763" type="Load_Adam">
+                                    <param id="0" name="Instance variable">Joury</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="366127994768658" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="826576559378632">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="576537818242972" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="716482588000915" type="Load_Adam">
+                                    <param id="0" name="Animation">&quot;J_Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="883696923057617" title="Spriter_Load">
+            <sub-events>
+                <event-block sid="780550488458549">
+                    <conditions>
+                        <condition id="666" name="On initialised" sid="848419725376924" type="clickMe" />
+                    </conditions>
+                    <actions>
+                        <action id="666" name="Associate object type" sid="888213527344554" type="clickMe">
+                            <param id="0" name="Object">clickMe_clickMe_clickMe</param>
+                            <param id="1" name="Name">&quot;clickMe_clickMe&quot;</param>
+                        </action>
+                        <action id="666" name="Associate object type" sid="530490416164713" type="clickMe">
+                            <param id="0" name="Object">clickMe_clickMe_boxTiny</param>
+                            <param id="1" name="Name">&quot;clickMe_boxTiny&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="646212767620523" type="System">
+                            <param id="0" name="Object to create">clickMe</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-5000</param>
+                            <param id="3" name="Y">-5000</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="670671711054495" type="System">
+                            <param id="0" name="Variable">Spriter_Load</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="859386925486128" type="clickMe" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
